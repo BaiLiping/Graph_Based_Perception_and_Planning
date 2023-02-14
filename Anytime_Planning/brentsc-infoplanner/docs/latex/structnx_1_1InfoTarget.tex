@@ -1,0 +1,49 @@
+\hypertarget{structnx_1_1InfoTarget}{}\section{nx\+:\+:Info\+Target Struct Reference}
+\label{structnx_1_1InfoTarget}\index{nx\+::\+Info\+Target@{nx\+::\+Info\+Target}}
+
+
+{\ttfamily \#include $<$info\+\_\+target\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for nx\+:\+:Info\+Target\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{structnx_1_1InfoTarget__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for nx\+:\+:Info\+Target\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{structnx_1_1InfoTarget__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnx_1_1InfoTarget_a00952ad1d04afb571a3f5c71447f7bb3}\label{structnx_1_1InfoTarget_a00952ad1d04afb571a3f5c71447f7bb3}} 
+{\bfseries Info\+Target} (int ID, const Vector\+Xd \&state, const Matrix\+Xd \&A, const Matrix\+Xd \&W, const Matrix\+Xd \&covariance)
+\item 
+\mbox{\Hypertarget{structnx_1_1InfoTarget_a169b44c7fdef239d040b1438ee881b48}\label{structnx_1_1InfoTarget_a169b44c7fdef239d040b1438ee881b48}} 
+void {\bfseries Update\+Belief} (Vector\+Xd mean, Matrix\+Xd cov)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnx_1_1InfoTarget_a74fe130d7cc4f682e7f0d8bab46a8440}\label{structnx_1_1InfoTarget_a74fe130d7cc4f682e7f0d8bab46a8440}} 
+Matrix\+Xd {\bfseries covariance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structnx_1_1InfoTarget}{Info\+Target} class extends the \hyperlink{structnx_1_1Target}{Target} class to include a covariance matrix, so that it supports a gaussian probability distribution over targets. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/target\+\_\+motion\+\_\+models/info\+\_\+target\+\_\+model.\+h\end{DoxyCompactItemize}

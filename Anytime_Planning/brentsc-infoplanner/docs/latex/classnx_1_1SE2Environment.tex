@@ -1,0 +1,158 @@
+\hypertarget{classnx_1_1SE2Environment}{}\section{nx\+:\+:S\+E2\+Environment Class Reference}
+\label{classnx_1_1SE2Environment}\index{nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}}
+
+
+Inheritance diagram for nx\+:\+:S\+E2\+Environment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classnx_1_1SE2Environment__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for nx\+:\+:S\+E2\+Environment\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classnx_1_1SE2Environment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_acbb1475684cbec971710e61cdbcadc6e}\label{classnx_1_1SE2Environment_acbb1475684cbec971710e61cdbcadc6e}} 
+{\bfseries S\+E2\+Environment} (std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1map__nd}{nx\+::map\+\_\+nd} $>$ map\+\_\+in, std\+::shared\+\_\+ptr$<$ std\+::vector$<$ char $>$$>$ cmap\+\_\+ptr, const std\+::string \&mprim\+\_\+yaml, \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} goal=\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}())
+\item 
+int \hyperlink{classnx_1_1SE2Environment_a0fe7c5f438795a98f17be0ed95b2ff7c}{state\+\_\+to\+\_\+idx} (const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&state) const override
+\item 
+Vector3d \hyperlink{classnx_1_1SE2Environment_ab1f9056e6fffe905ec225ee3885679b4}{state\+\_\+to\+\_\+\+S\+E2} (const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&state) const override
+\item 
+std\+::vector$<$ int $>$ \hyperlink{classnx_1_1SE2Environment_ae3ac780e46d421898e3c7db696d8026f}{state\+\_\+to\+\_\+cell} (const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&state) const override
+\item 
+void \hyperlink{classnx_1_1SE2Environment_a2a4159dc6bf024e522bb504c77e9aa69}{get\+\_\+succ} (const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&curr, std\+::vector$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ \&succ, std\+::vector$<$ int $>$ \&succ\+\_\+idx, std\+::vector$<$ double $>$ \&succ\+\_\+cost, std\+::vector$<$ int $>$ \&action\+\_\+idx) const override
+\item 
+void \hyperlink{classnx_1_1SE2Environment_ac9453c2a57e53c9f511eb04aabaa0809}{forward\+\_\+action} (const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&curr, int action\+\_\+id, std\+::vector$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ \&next\+\_\+micro) const override
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a086b171b619278b4fde9819cfb433b48}\label{classnx_1_1SE2Environment_a086b171b619278b4fde9819cfb433b48}} 
+typedef \hyperlink{structnx_1_1MotionPrimitive}{Motion\+Primitive}$<$ std\+::array$<$ double, 3 $>$, std\+::array$<$ double, 2 $>$ $>$ {\bfseries M\+Prim}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_ab0c0d3623fa001720fec80fe973e551c}\label{classnx_1_1SE2Environment_ab0c0d3623fa001720fec80fe973e551c}} 
+\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} {\bfseries goal\+\_\+coord}
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_ae28b4b651b5b2b0f00862951083a84e6}\label{classnx_1_1SE2Environment_ae28b4b651b5b2b0f00862951083a84e6}} 
+size\+\_\+t {\bfseries max\+\_\+len\+\_\+traj\+\_\+} = 0
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a987e1a74480013e9c7187aee9fc25820}\label{classnx_1_1SE2Environment_a987e1a74480013e9c7187aee9fc25820}} 
+double {\bfseries samp} = 0.\+5
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a02e5b4637072bf60e4bb24fda092d166}\label{classnx_1_1SE2Environment_a02e5b4637072bf60e4bb24fda092d166}} 
+int {\bfseries yaw\+\_\+discretization\+\_\+size} = 60
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a452850e27e78085d661707f72c72497a}\label{classnx_1_1SE2Environment_a452850e27e78085d661707f72c72497a}} 
+double {\bfseries yaw\+\_\+res} = 2 $\ast$ PI / yaw\+\_\+discretization\+\_\+size
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a197d1b81123220efcc2b51bc7928f467}\label{classnx_1_1SE2Environment_a197d1b81123220efcc2b51bc7928f467}} 
+bool {\bfseries is\+\_\+3d}
+\item 
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a7941f5dec4704d105ce5084ce759d430}\label{classnx_1_1SE2Environment_a7941f5dec4704d105ce5084ce759d430}} 
+std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::vector$<$ std\+::array$<$ int, 3 $>$ $>$ $>$ $>$ $>$ {\bfseries mprim\+\_\+xd\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1SE2Environment_ac9453c2a57e53c9f511eb04aabaa0809}\label{classnx_1_1SE2Environment_ac9453c2a57e53c9f511eb04aabaa0809}} 
+\index{nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}!forward\+\_\+action@{forward\+\_\+action}}
+\index{forward\+\_\+action@{forward\+\_\+action}!nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}}
+\subsubsection{\texorpdfstring{forward\+\_\+action()}{forward\_action()}}
+{\footnotesize\ttfamily void nx\+::\+S\+E2\+Environment\+::forward\+\_\+action (\begin{DoxyParamCaption}\item[{const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&}]{curr,  }\item[{int}]{action\+\_\+id,  }\item[{std\+::vector$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ \&}]{next\+\_\+micro }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the list of micro-\/states generated from applying the action with action\+\_\+id. 
+\begin{DoxyParams}{Parameters}
+{\em curr} & Current state. \\
+\hline
+{\em action\+\_\+id} & Action index to apply. \\
+\hline
+{\em next\+\_\+micro} & List of micro-\/states generated along the action. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classnx_1_1Environment_a4f3ee5bb7665210e6262d333857e5f4f}{nx\+::\+Environment$<$ S\+E3\+Pose $>$}.
+
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a2a4159dc6bf024e522bb504c77e9aa69}\label{classnx_1_1SE2Environment_a2a4159dc6bf024e522bb504c77e9aa69}} 
+\index{nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}!get\+\_\+succ@{get\+\_\+succ}}
+\index{get\+\_\+succ@{get\+\_\+succ}!nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}}
+\subsubsection{\texorpdfstring{get\+\_\+succ()}{get\_succ()}}
+{\footnotesize\ttfamily void nx\+::\+S\+E2\+Environment\+::get\+\_\+succ (\begin{DoxyParamCaption}\item[{const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&}]{curr,  }\item[{std\+::vector$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ \&}]{succ,  }\item[{std\+::vector$<$ int $>$ \&}]{succ\+\_\+idx,  }\item[{std\+::vector$<$ double $>$ \&}]{succ\+\_\+cost,  }\item[{std\+::vector$<$ int $>$ \&}]{action\+\_\+idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Computes the successor nodes from state curr, taking into account the cost\+Map. 
+\begin{DoxyParams}{Parameters}
+{\em curr} & The current state. \\
+\hline
+{\em succ} & The list of successors to be computed. \\
+\hline
+{\em succ\+\_\+idx} & The linear indices of the successors. \\
+\hline
+{\em succ\+\_\+cost} & \\
+\hline
+{\em action\+\_\+idx} & \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classnx_1_1Environment_a5879e51878691196971e94880d45b551}{nx\+::\+Environment$<$ S\+E3\+Pose $>$}.
+
+\mbox{\Hypertarget{classnx_1_1SE2Environment_ae3ac780e46d421898e3c7db696d8026f}\label{classnx_1_1SE2Environment_ae3ac780e46d421898e3c7db696d8026f}} 
+\index{nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}!state\+\_\+to\+\_\+cell@{state\+\_\+to\+\_\+cell}}
+\index{state\+\_\+to\+\_\+cell@{state\+\_\+to\+\_\+cell}!nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}}
+\subsubsection{\texorpdfstring{state\+\_\+to\+\_\+cell()}{state\_to\_cell()}}
+{\footnotesize\ttfamily std\+::vector$<$int$>$ nx\+::\+S\+E2\+Environment\+::state\+\_\+to\+\_\+cell (\begin{DoxyParamCaption}\item[{const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Converts a state to its corresponding cell coordinates in the map. \begin{DoxyReturn}{Returns}
+The cell coordinates of the state. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classnx_1_1Environment_adb86237d799683c40f17c95ea39eeba3}{nx\+::\+Environment$<$ S\+E3\+Pose $>$}.
+
+\mbox{\Hypertarget{classnx_1_1SE2Environment_a0fe7c5f438795a98f17be0ed95b2ff7c}\label{classnx_1_1SE2Environment_a0fe7c5f438795a98f17be0ed95b2ff7c}} 
+\index{nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}!state\+\_\+to\+\_\+idx@{state\+\_\+to\+\_\+idx}}
+\index{state\+\_\+to\+\_\+idx@{state\+\_\+to\+\_\+idx}!nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}}
+\subsubsection{\texorpdfstring{state\+\_\+to\+\_\+idx()}{state\_to\_idx()}}
+{\footnotesize\ttfamily int nx\+::\+S\+E2\+Environment\+::state\+\_\+to\+\_\+idx (\begin{DoxyParamCaption}\item[{const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Converts a state to its corresponding linear index in the map. \begin{DoxyReturn}{Returns}
+The linear index of the state. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classnx_1_1Environment_a1c558036435de03a3afd85e940aad600}{nx\+::\+Environment$<$ S\+E3\+Pose $>$}.
+
+\mbox{\Hypertarget{classnx_1_1SE2Environment_ab1f9056e6fffe905ec225ee3885679b4}\label{classnx_1_1SE2Environment_ab1f9056e6fffe905ec225ee3885679b4}} 
+\index{nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}!state\+\_\+to\+\_\+\+S\+E2@{state\+\_\+to\+\_\+\+S\+E2}}
+\index{state\+\_\+to\+\_\+\+S\+E2@{state\+\_\+to\+\_\+\+S\+E2}!nx\+::\+S\+E2\+Environment@{nx\+::\+S\+E2\+Environment}}
+\subsubsection{\texorpdfstring{state\+\_\+to\+\_\+\+S\+E2()}{state\_to\_SE2()}}
+{\footnotesize\ttfamily Vector3d nx\+::\+S\+E2\+Environment\+::state\+\_\+to\+\_\+\+S\+E2 (\begin{DoxyParamCaption}\item[{const \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the pose of the state, projecected into the S\+E(2) space, i.\+e. 2.\+5D position (X,Y,Yaw). \begin{DoxyReturn}{Returns}
+The S\+E(2) Pose of the state. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classnx_1_1Environment_ae31bd7f19efac45fc07d405f1fcfd2b2}{nx\+::\+Environment$<$ S\+E3\+Pose $>$}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/env/env\+\_\+se2.\+h\end{DoxyCompactItemize}

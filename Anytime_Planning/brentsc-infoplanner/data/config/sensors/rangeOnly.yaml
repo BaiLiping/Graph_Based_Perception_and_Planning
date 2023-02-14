@@ -1,0 +1,11 @@
+# Sensor Observation Model
+sensorType: range
+min_range: 1 # Range
+max_range: 15
+# Angles in Radians
+min_hang: -3.14 # Horizontal angle
+max_hang: 3.14
+min_vang: -3.14 # Vertical angle
+max_vang: 3.14
+noise_stdev: .015 # Range Noise
+#off_file: data/maps/fla_warehouse1/fla_warehouse1.off # For ray-tracing detectability.

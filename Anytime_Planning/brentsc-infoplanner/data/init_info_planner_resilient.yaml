@@ -1,0 +1,78 @@
+# Information Planner Simulation Parameters
+debug: 0
+Tmax: 50 # Planning Horizon
+n_controls: 10 # Replan time.
+coordinate: 1 # Robots may coordinate control
+collaborate: 1 # Robots share estimates.
+centralized: 0 # Robots use the same estimate.
+eps: 3 # Epsilon-redundancy parameter. Use .inf for infinity.
+del: 2.0 # Trajectory-crossing parameter.
+allocated_time: .01 # ARVI Time
+explore: 0 # Robots use visibility exploration landmarks
+exploration_weight: .05 # Weight of exploration landmarks
+comm_range: .inf # Communication range. Use .inf for infinity.
+resilience: 1
+jammed: 1
+
+log: 1 # Save CSV files
+estimation_only: 0 # Use this flag if you only want to perform estimation and robot positions given below
+realtime_data: /home/brent/ws_soa/src/onr_soa/soa_track_targets/quadrotor_Experiment_data/video_data
+
+# Environment Params
+
+mapmin: [-32, -32, -3.14159265359]
+mapmax: [32, 32,  3.14159265359]
+mapres: [.1, .1,  0.26179938779]
+
+outputpath: ./Results_temp
+
+mprimpath: ./data/mprim/mprim_SE2.yaml
+
+# Robot Parameters
+T: 10 # Prediction Horizon
+samp: .3
+
+# Sensor Motion Model
+# Initial robot state
+n_robots: 2
+x0:
+ - [30, 30, 0]
+ - [29, 29, 0]
+ - [10, 10, 0]
+ - [10, 10, 0]
+ - [10, 10, 0]
+ - [10, 10, 0]
+ - [10, 10, 0]
+ - [10, 10, 0]
+
+
+Sigma0:
+- [2, 0]
+- [0, 2]
+
+# Target Motion Model
+velocity: 1 # Track velocity
+use_prior: 0
+env_da:
+- [1, 2]
+
+n_targets: 2
+y0: # Here initial positions are given. Velocities start at (0,0)
+- [31, 31]
+- [30.5, 30.5]
+- [11, 15]
+- [14, 14]
+- [15, 13]
+- [19, 12]
+- [9, 11]
+
+q: .025 # Diffusion / Noise parameter for motion model
+
+# Sensor Observation Model
+r_sense: 5
+fov: 360 # Degrees
+b_sigma: 0.001 # Bearing Noise
+r_sigma: .15 # Range Noise
+
+
+

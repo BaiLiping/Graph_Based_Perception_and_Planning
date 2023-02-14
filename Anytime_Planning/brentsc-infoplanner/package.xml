@@ -1,0 +1,16 @@
+<package format="2">
+  <name>information_gathering_library</name>
+  <version>0.1.0</version>
+  <description>Linear Gaussian Information Acquisition Planning Library</description>
+  <author>Brent Schlotfeldt</author>
+  <maintainer email="brentsc@seas.upenn.edu">Brent Schlotfeldt</maintainer>
+  <license>GPLv3</license>
+  
+  <!-- Dependencies which this package needs to build itself. -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Exports so that catkin can find the files -->
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

@@ -1,0 +1,190 @@
+\hypertarget{classnx_1_1TargetModel}{}\section{nx\+:\+:Target\+Model Class Reference}
+\label{classnx_1_1TargetModel}\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+
+
+{\ttfamily \#include $<$target\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for nx\+:\+:Target\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classnx_1_1TargetModel__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1TargetModel_ad6df134361a815092dde948c923fee87}{Target\+Model} ()
+\item 
+bool \hyperlink{classnx_1_1TargetModel_ab38b91d30509a7e981c456d74eecb07c}{Add\+Target} (int ID, const \hyperlink{structnx_1_1Target}{Target} \&target)
+\item 
+void \hyperlink{classnx_1_1TargetModel_a460f91497d1eb6808543b0bbc26ddd61}{Update\+Target} (int ID, const Vector\+Xd \&state)
+\item 
+void \hyperlink{classnx_1_1TargetModel_ad89e37efd10097f7c2d97f79ab380919}{Remove\+Target} (int ID)
+\item 
+Vector\+Xd \hyperlink{classnx_1_1TargetModel_afbdd3abdce59717ddfa16b70808178ca}{Get\+Target\+State} () const
+\item 
+Matrix\+Xd \hyperlink{classnx_1_1TargetModel_a1ee2990a96918171f0f779afed6d9f53}{Get\+System\+Matrix} () const
+\item 
+Matrix\+Xd \hyperlink{classnx_1_1TargetModel_a8b4c0bf53662bfedb955754f8debc674}{Get\+Noise\+Matrix} () const
+\item 
+std\+::vector$<$ Vector\+Xd $>$ \hyperlink{classnx_1_1TargetModel_a106254c8b6d05f241ab029ed7f534ea9}{Predict\+Target\+State} (int T) const
+\item 
+void \hyperlink{classnx_1_1TargetModel_ab170163096edacbfc2fc4e697f9cf139}{Update\+State} (int T)
+\item 
+int \hyperlink{classnx_1_1TargetModel_a269a926fe7a0fc4eae2416f4f0837f94}{num\+\_\+targets} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1TargetModel_a103cd3cc81dd956d152ef80528188ae7}\label{classnx_1_1TargetModel_a103cd3cc81dd956d152ef80528188ae7}} 
+int {\bfseries target\+\_\+dim} \{0\}
+\item 
+\mbox{\Hypertarget{classnx_1_1TargetModel_a4e336259fa51d8c5b168256d86aea564}\label{classnx_1_1TargetModel_a4e336259fa51d8c5b168256d86aea564}} 
+std\+::map$<$ int, std\+::shared\+\_\+ptr$<$ \hyperlink{structnx_1_1Target}{Target} $>$ $>$ {\bfseries targets}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classnx_1_1TargetModel_a30aa54f7e05d026d06032279855a2b14}{Add\+Shared\+Target} (int ID, std\+::shared\+\_\+ptr$<$ \hyperlink{structnx_1_1Target}{Target} $>$ target\+\_\+ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic \hyperlink{structnx_1_1Target}{Target} Model. This model is capable of simulating the ground truth target, as well as providing Jacobians that the robot may use. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnx_1_1TargetModel_ad6df134361a815092dde948c923fee87}\label{classnx_1_1TargetModel_ad6df134361a815092dde948c923fee87}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Target\+Model@{Target\+Model}}
+\index{Target\+Model@{Target\+Model}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Target\+Model()}{TargetModel()}}
+{\footnotesize\ttfamily nx\+::\+Target\+Model\+::\+Target\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an empty \hyperlink{structnx_1_1Target}{Target} model. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1TargetModel_a30aa54f7e05d026d06032279855a2b14}\label{classnx_1_1TargetModel_a30aa54f7e05d026d06032279855a2b14}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Add\+Shared\+Target@{Add\+Shared\+Target}}
+\index{Add\+Shared\+Target@{Add\+Shared\+Target}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Add\+Shared\+Target()}{AddSharedTarget()}}
+{\footnotesize\ttfamily bool nx\+::\+Target\+Model\+::\+Add\+Shared\+Target (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{structnx_1_1Target}{Target} $>$}]{target\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Underlying shared\+\_\+ptr implementation of the Add\+Target function. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID to be added. \\
+\hline
+{\em target\+\_\+ptr} & The shared\+\_\+ptr to the \hyperlink{structnx_1_1Target}{Target} object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the Add operation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_ab38b91d30509a7e981c456d74eecb07c}\label{classnx_1_1TargetModel_ab38b91d30509a7e981c456d74eecb07c}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Add\+Target@{Add\+Target}}
+\index{Add\+Target@{Add\+Target}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Add\+Target()}{AddTarget()}}
+{\footnotesize\ttfamily bool nx\+::\+Target\+Model\+::\+Add\+Target (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{const \hyperlink{structnx_1_1Target}{Target} \&}]{target }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a target to the \hyperlink{structnx_1_1Target}{Target} Model. Returns false if a target with the same ID has been already added. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the target to add. \\
+\hline
+{\em target} & The \hyperlink{structnx_1_1Target}{Target} to be added. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the Add\+Target operation. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_a8b4c0bf53662bfedb955754f8debc674}\label{classnx_1_1TargetModel_a8b4c0bf53662bfedb955754f8debc674}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Get\+Noise\+Matrix@{Get\+Noise\+Matrix}}
+\index{Get\+Noise\+Matrix@{Get\+Noise\+Matrix}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Get\+Noise\+Matrix()}{GetNoiseMatrix()}}
+{\footnotesize\ttfamily Matrix\+Xd nx\+::\+Target\+Model\+::\+Get\+Noise\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the joint noise matrix W of the target model. \begin{DoxyReturn}{Returns}
+The noise matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_a1ee2990a96918171f0f779afed6d9f53}\label{classnx_1_1TargetModel_a1ee2990a96918171f0f779afed6d9f53}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Get\+System\+Matrix@{Get\+System\+Matrix}}
+\index{Get\+System\+Matrix@{Get\+System\+Matrix}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Get\+System\+Matrix()}{GetSystemMatrix()}}
+{\footnotesize\ttfamily Matrix\+Xd nx\+::\+Target\+Model\+::\+Get\+System\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the joint system matrix A of the target model. \begin{DoxyReturn}{Returns}
+The system matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_afbdd3abdce59717ddfa16b70808178ca}\label{classnx_1_1TargetModel_afbdd3abdce59717ddfa16b70808178ca}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Get\+Target\+State@{Get\+Target\+State}}
+\index{Get\+Target\+State@{Get\+Target\+State}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Get\+Target\+State()}{GetTargetState()}}
+{\footnotesize\ttfamily Vector\+Xd nx\+::\+Target\+Model\+::\+Get\+Target\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the joint target state as a Vector. \begin{DoxyReturn}{Returns}
+The target state to be returned. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_a269a926fe7a0fc4eae2416f4f0837f94}\label{classnx_1_1TargetModel_a269a926fe7a0fc4eae2416f4f0837f94}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!num\+\_\+targets@{num\+\_\+targets}}
+\index{num\+\_\+targets@{num\+\_\+targets}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{num\+\_\+targets()}{num\_targets()}}
+{\footnotesize\ttfamily int nx\+::\+Target\+Model\+::num\+\_\+targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of targets being modeled. \begin{DoxyReturn}{Returns}
+Number of targets. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_a106254c8b6d05f241ab029ed7f534ea9}\label{classnx_1_1TargetModel_a106254c8b6d05f241ab029ed7f534ea9}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Predict\+Target\+State@{Predict\+Target\+State}}
+\index{Predict\+Target\+State@{Predict\+Target\+State}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Predict\+Target\+State()}{PredictTargetState()}}
+{\footnotesize\ttfamily std\+::vector$<$Vector\+Xd$>$ nx\+::\+Target\+Model\+::\+Predict\+Target\+State (\begin{DoxyParamCaption}\item[{int}]{T }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Predicts a target trajectory of horizon T, and returns the result. The first entry is the current state. 
+\begin{DoxyParams}{Parameters}
+{\em T} & The time horizon to predict the trajectory over. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The vector of predicted target states over the horizon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1TargetModel_ad89e37efd10097f7c2d97f79ab380919}\label{classnx_1_1TargetModel_ad89e37efd10097f7c2d97f79ab380919}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Remove\+Target@{Remove\+Target}}
+\index{Remove\+Target@{Remove\+Target}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Remove\+Target()}{RemoveTarget()}}
+{\footnotesize\ttfamily void nx\+::\+Target\+Model\+::\+Remove\+Target (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Removes a target with the ID specified. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID to be removed from the target set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnx_1_1TargetModel_ab170163096edacbfc2fc4e697f9cf139}\label{classnx_1_1TargetModel_ab170163096edacbfc2fc4e697f9cf139}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Update\+State@{Update\+State}}
+\index{Update\+State@{Update\+State}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Update\+State()}{UpdateState()}}
+{\footnotesize\ttfamily void nx\+::\+Target\+Model\+::\+Update\+State (\begin{DoxyParamCaption}\item[{int}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Updates the state of all targets by simulating the gaussian system model. 
+\begin{DoxyParams}{Parameters}
+{\em T} & The number of timesteps to evolve the environment by. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnx_1_1TargetModel_a460f91497d1eb6808543b0bbc26ddd61}\label{classnx_1_1TargetModel_a460f91497d1eb6808543b0bbc26ddd61}} 
+\index{nx\+::\+Target\+Model@{nx\+::\+Target\+Model}!Update\+Target@{Update\+Target}}
+\index{Update\+Target@{Update\+Target}!nx\+::\+Target\+Model@{nx\+::\+Target\+Model}}
+\subsubsection{\texorpdfstring{Update\+Target()}{UpdateTarget()}}
+{\footnotesize\ttfamily void nx\+::\+Target\+Model\+::\+Update\+Target (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{const Vector\+Xd \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Updates the state of the target with specified ID. Does nothing if the target does not exist. 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the target to be updated. \\
+\hline
+{\em state} & The new state to be updated. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/target\+\_\+motion\+\_\+models/target\+\_\+model.\+h\end{DoxyCompactItemize}

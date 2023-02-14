@@ -1,0 +1,89 @@
+\hypertarget{structnx_1_1Target}{}\section{nx\+:\+:Target Struct Reference}
+\label{structnx_1_1Target}\index{nx\+::\+Target@{nx\+::\+Target}}
+
+
+{\ttfamily \#include $<$target\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for nx\+:\+:Target\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{structnx_1_1Target__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnx_1_1Target_aff71c457fa00ebbfd439d351a5574767}{Target} (int ID, const Vector\+Xd \&state, const Matrix\+Xd \&A, const Matrix\+Xd \&W)
+\item 
+void \hyperlink{structnx_1_1Target_a5a8c9703ee9250441895e9e7930408b0}{Update\+State} (int T)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_a9f14ece231710bdf7610946ee1ad0340}\label{structnx_1_1Target_a9f14ece231710bdf7610946ee1ad0340}} 
+int {\bfseries ID}
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_ace67ce1f90bf284b8db8adad8be2ed5e}\label{structnx_1_1Target_ace67ce1f90bf284b8db8adad8be2ed5e}} 
+Vector\+Xd {\bfseries state}
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_a42f5bc317ecc3623822bb7c010b87e5a}\label{structnx_1_1Target_a42f5bc317ecc3623822bb7c010b87e5a}} 
+Matrix\+Xd {\bfseries A}
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_a8db57d5dee52aed6f2b0a2a44f034a1b}\label{structnx_1_1Target_a8db57d5dee52aed6f2b0a2a44f034a1b}} 
+Matrix\+Xd {\bfseries W}
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_af7121dba0afc6e0daa3b33a2db29d75b}\label{structnx_1_1Target_af7121dba0afc6e0daa3b33a2db29d75b}} 
+int {\bfseries y\+\_\+dim}
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_ad0147223864927924694296396478150}\label{structnx_1_1Target_ad0147223864927924694296396478150}} 
+double {\bfseries max\+\_\+vel} = 1.\+0
+\item 
+\mbox{\Hypertarget{structnx_1_1Target_a9cebb09e697e9927429911b3eaff1dbc}\label{structnx_1_1Target_a9cebb09e697e9927429911b3eaff1dbc}} 
+double {\bfseries samp} = 0.\+5
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structnx_1_1Target}{Target} struct describing a target with linear state evolution. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnx_1_1Target_aff71c457fa00ebbfd439d351a5574767}\label{structnx_1_1Target_aff71c457fa00ebbfd439d351a5574767}} 
+\index{nx\+::\+Target@{nx\+::\+Target}!Target@{Target}}
+\index{Target@{Target}!nx\+::\+Target@{nx\+::\+Target}}
+\subsubsection{\texorpdfstring{Target()}{Target()}}
+{\footnotesize\ttfamily nx\+::\+Target\+::\+Target (\begin{DoxyParamCaption}\item[{int}]{ID,  }\item[{const Vector\+Xd \&}]{state,  }\item[{const Matrix\+Xd \&}]{A,  }\item[{const Matrix\+Xd \&}]{W }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a \hyperlink{structnx_1_1Target}{Target} with the following properties 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the target. \\
+\hline
+{\em state} & The current state of the \hyperlink{structnx_1_1Target}{Target}. \\
+\hline
+{\em A} & The system dynamics matrix. \\
+\hline
+{\em W} & The gaussian noise matrix. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structnx_1_1Target_a5a8c9703ee9250441895e9e7930408b0}\label{structnx_1_1Target_a5a8c9703ee9250441895e9e7930408b0}} 
+\index{nx\+::\+Target@{nx\+::\+Target}!Update\+State@{Update\+State}}
+\index{Update\+State@{Update\+State}!nx\+::\+Target@{nx\+::\+Target}}
+\subsubsection{\texorpdfstring{Update\+State()}{UpdateState()}}
+{\footnotesize\ttfamily void nx\+::\+Target\+::\+Update\+State (\begin{DoxyParamCaption}\item[{int}]{T }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Updates the state of the \hyperlink{structnx_1_1Target}{Target} by T steps, by simulating the gaussian dynamics. 
+\begin{DoxyParams}{Parameters}
+{\em T} & The horizon to simulate over. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/target\+\_\+motion\+\_\+models/target\+\_\+model.\+h\end{DoxyCompactItemize}

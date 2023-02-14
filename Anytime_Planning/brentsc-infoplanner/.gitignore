@@ -1,0 +1,15 @@
+# BUILD
+build
+debug
+release
+lib
+bin
+
+# Python
+venv/
+script/python/__pycache__/
+pybind11
+# script/python/rl_baseline.py
+# IDE
+.idea/ 
+.idea

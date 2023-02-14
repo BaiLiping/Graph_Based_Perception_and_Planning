@@ -1,0 +1,6 @@
+# Sensor Observation Model
+sensorType: range_bearing
+r_sense: 8
+fov: 94 # Degrees
+b_sigma: 0.1 # Bearing Noise
+r_sigma: 1.5 # Range Noise

@@ -1,0 +1,118 @@
+\hypertarget{classnx_1_1Robot}{}\section{nx\+:\+:Robot$<$ state $>$ Class Template Reference}
+\label{classnx_1_1Robot}\index{nx\+::\+Robot$<$ state $>$@{nx\+::\+Robot$<$ state $>$}}
+
+
+{\ttfamily \#include $<$robot.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1Robot_ae20fd90482b8fd35e5a36f802b202ce7}{Robot} (state x0, std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Environment}{Environment}$<$ state $>$$>$ \&env, std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model} $>$ tmm, std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Sensor}{Sensor}$<$ state $>$$>$ sensor)
+\item 
+void \hyperlink{classnx_1_1Robot_a246cd83fad899283d29fc31658a7e601}{apply\+Control} (std\+::vector$<$ int $>$ \&action\+\_\+idx, const int n\+\_\+control=1)
+\item 
+state \hyperlink{classnx_1_1Robot_a78c21ad01482472ca59521e383e88ae1}{get\+State} () const
+\item 
+void \hyperlink{classnx_1_1Robot_a36d91b220aa89ec1f654fd225cb54757}{set\+State} (state s)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1Robot_a6a7c48c5f26eddf890702d2470348be8}\label{classnx_1_1Robot_a6a7c48c5f26eddf890702d2470348be8}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Environment}{Environment}$<$ state $>$ $>$ {\bfseries env}
+\item 
+\mbox{\Hypertarget{classnx_1_1Robot_a4d75b4087149879660d2da1e8544d962}\label{classnx_1_1Robot_a4d75b4087149879660d2da1e8544d962}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model} $>$ {\bfseries tmm}
+\item 
+\mbox{\Hypertarget{classnx_1_1Robot_afdc113e533c3758d1f77c47fb72bcc87}\label{classnx_1_1Robot_afdc113e533c3758d1f77c47fb72bcc87}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Sensor}{Sensor}$<$ state $>$ $>$ {\bfseries sensor}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1Robot_a72ae1d7aee42258b8a580f791a1bf344}\label{classnx_1_1Robot_a72ae1d7aee42258b8a580f791a1bf344}} 
+state {\bfseries x}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class state$>$\newline
+class nx\+::\+Robot$<$ state $>$}
+
+The \hyperlink{classnx_1_1Robot}{Robot} class is an abstraction of a robot consisting of a state, dynamics, and target and observation models related to an information gathering task it will aim to achieve. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnx_1_1Robot_ae20fd90482b8fd35e5a36f802b202ce7}\label{classnx_1_1Robot_ae20fd90482b8fd35e5a36f802b202ce7}} 
+\index{nx\+::\+Robot@{nx\+::\+Robot}!Robot@{Robot}}
+\index{Robot@{Robot}!nx\+::\+Robot@{nx\+::\+Robot}}
+\subsubsection{\texorpdfstring{Robot()}{Robot()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+\hyperlink{classnx_1_1Robot}{nx\+::\+Robot}$<$ state $>$\+::\hyperlink{classnx_1_1Robot}{Robot} (\begin{DoxyParamCaption}\item[{state}]{x0,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Environment}{Environment}$<$ state $>$$>$ \&}]{env,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model} $>$}]{tmm,  }\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Sensor}{Sensor}$<$ state $>$$>$}]{sensor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a robot with given initial state, environment, target model, and sensor. 
+\begin{DoxyParams}{Parameters}
+{\em x0} & The initial robot state. \\
+\hline
+{\em env} & The robot environment. \\
+\hline
+{\em tmm} & The target motion model. \\
+\hline
+{\em sensor} & The robot sensor. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1Robot_a246cd83fad899283d29fc31658a7e601}\label{classnx_1_1Robot_a246cd83fad899283d29fc31658a7e601}} 
+\index{nx\+::\+Robot@{nx\+::\+Robot}!apply\+Control@{apply\+Control}}
+\index{apply\+Control@{apply\+Control}!nx\+::\+Robot@{nx\+::\+Robot}}
+\subsubsection{\texorpdfstring{apply\+Control()}{applyControl()}}
+{\footnotesize\ttfamily template$<$class state $>$ \\
+void \hyperlink{classnx_1_1Robot}{nx\+::\+Robot}$<$ state $>$\+::apply\+Control (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$ \&}]{action\+\_\+idx,  }\item[{const int}]{n\+\_\+control = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+Applies a sequence of controls to the robot\textquotesingle{}s state, modifying its current state. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em state} & The state space of the robot. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em action\+\_\+idx} & The vector of indices in the action space to apply. \\
+\hline
+{\em n\+\_\+controls} & The number of control inputs in the sequence to apply. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnx_1_1Robot_a78c21ad01482472ca59521e383e88ae1}\label{classnx_1_1Robot_a78c21ad01482472ca59521e383e88ae1}} 
+\index{nx\+::\+Robot@{nx\+::\+Robot}!get\+State@{get\+State}}
+\index{get\+State@{get\+State}!nx\+::\+Robot@{nx\+::\+Robot}}
+\subsubsection{\texorpdfstring{get\+State()}{getState()}}
+{\footnotesize\ttfamily template$<$class state $>$ \\
+state \hyperlink{classnx_1_1Robot}{nx\+::\+Robot}$<$ state $>$\+::get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the state of the robot in its templated type. 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em state} & The state space of the robot. \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+The templated state of the robot. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Robot_a36d91b220aa89ec1f654fd225cb54757}\label{classnx_1_1Robot_a36d91b220aa89ec1f654fd225cb54757}} 
+\index{nx\+::\+Robot@{nx\+::\+Robot}!set\+State@{set\+State}}
+\index{set\+State@{set\+State}!nx\+::\+Robot@{nx\+::\+Robot}}
+\subsubsection{\texorpdfstring{set\+State()}{setState()}}
+{\footnotesize\ttfamily template$<$class state $>$ \\
+void \hyperlink{classnx_1_1Robot}{nx\+::\+Robot}$<$ state $>$\+::set\+State (\begin{DoxyParamCaption}\item[{state}]{s }\end{DoxyParamCaption})}
+
+Assigns the current robot state to s. 
+\begin{DoxyParams}{Parameters}
+{\em s} & The new state to be assigned. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/planning/infoplanner\+\_\+arvi.\+h\item 
+include/igl/robot.\+h\item 
+src/robot.\+cpp\end{DoxyCompactItemize}

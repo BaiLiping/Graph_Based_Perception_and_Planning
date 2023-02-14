@@ -1,0 +1,173 @@
+\hypertarget{classnx_1_1Environment}{}\section{nx\+:\+:Environment$<$ state $>$ Class Template Reference}
+\label{classnx_1_1Environment}\index{nx\+::\+Environment$<$ state $>$@{nx\+::\+Environment$<$ state $>$}}
+
+
+Collaboration diagram for nx\+:\+:Environment$<$ state $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classnx_1_1Environment__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1Environment_a989675f3a115e396a169841ea96697c7}\label{classnx_1_1Environment_a989675f3a115e396a169841ea96697c7}} 
+typedef \hyperlink{structnx_1_1MotionPrimitive}{Motion\+Primitive}$<$ std\+::array$<$ double, 3 $>$, std\+::array$<$ double, 2 $>$ $>$ {\bfseries M\+Prim}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1Environment_a23652067c6e2c838b7e895ada850fa6b}{Environment} (std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1map__nd}{nx\+::map\+\_\+nd} $>$ map\+\_\+in, std\+::shared\+\_\+ptr$<$ std\+::vector$<$ char $>$$>$ cmap, state goal=state())
+\item 
+virtual void \hyperlink{classnx_1_1Environment_a5879e51878691196971e94880d45b551}{get\+\_\+succ} (const state \&curr, std\+::vector$<$ state $>$ \&succ, std\+::vector$<$ int $>$ \&succ\+\_\+idx, std\+::vector$<$ double $>$ \&succ\+\_\+cost, std\+::vector$<$ int $>$ \&action\+\_\+idx) const =0
+\item 
+virtual void \hyperlink{classnx_1_1Environment_a4f3ee5bb7665210e6262d333857e5f4f}{forward\+\_\+action} (const state \&curr, int action\+\_\+id, std\+::vector$<$ state $>$ \&next\+\_\+micro) const =0
+\item 
+virtual int \hyperlink{classnx_1_1Environment_a1c558036435de03a3afd85e940aad600}{state\+\_\+to\+\_\+idx} (const state \&) const =0
+\item 
+virtual std\+::vector$<$ int $>$ \hyperlink{classnx_1_1Environment_adb86237d799683c40f17c95ea39eeba3}{state\+\_\+to\+\_\+cell} (const state \&) const =0
+\item 
+virtual Vector3d \hyperlink{classnx_1_1Environment_ae31bd7f19efac45fc07d405f1fcfd2b2}{state\+\_\+to\+\_\+\+S\+E2} (const state \&) const =0
+\item 
+virtual double \hyperlink{classnx_1_1Environment_a25f01903609749dc40aa5ae07c0f5e06}{Compute\+State\+Metric} (const state \&, const state \&) const =0
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1Environment_a5074fd389af065716dd7455e6eb58a10}\label{classnx_1_1Environment_a5074fd389af065716dd7455e6eb58a10}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1map__nd}{map\+\_\+nd} $>$ {\bfseries map}
+\item 
+\mbox{\Hypertarget{classnx_1_1Environment_a830b47524856d2074908a09883816a66}\label{classnx_1_1Environment_a830b47524856d2074908a09883816a66}} 
+std\+::shared\+\_\+ptr$<$ std\+::vector$<$ char $>$ $>$ {\bfseries cmap\+\_\+}
+\item 
+\mbox{\Hypertarget{classnx_1_1Environment_a55d4d93f32e8259e2355f281ce290e02}\label{classnx_1_1Environment_a55d4d93f32e8259e2355f281ce290e02}} 
+state {\bfseries goal\+\_\+pose}
+\item 
+\mbox{\Hypertarget{classnx_1_1Environment_af682fbcf24d8ec4ad43a80d0ccd64bba}\label{classnx_1_1Environment_af682fbcf24d8ec4ad43a80d0ccd64bba}} 
+std\+::vector$<$ \hyperlink{structnx_1_1MotionPrimitive}{M\+Prim} $>$ {\bfseries mprim\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnx_1_1Environment_a23652067c6e2c838b7e895ada850fa6b}\label{classnx_1_1Environment_a23652067c6e2c838b7e895ada850fa6b}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!Environment@{Environment}}
+\index{Environment@{Environment}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{Environment()}{Environment()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+\hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::\hyperlink{classnx_1_1Environment}{Environment} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1map__nd}{nx\+::map\+\_\+nd} $>$}]{map\+\_\+in,  }\item[{std\+::shared\+\_\+ptr$<$ std\+::vector$<$ char $>$$>$}]{cmap,  }\item[{state}]{goal = {\ttfamily state()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an environment interface. 
+\begin{DoxyParams}{Parameters}
+{\em M\+A\+P\+\_\+ptr\+\_\+in} & The unique\+\_\+ptr to the map information. \\
+\hline
+{\em cmap} & The unique\+\_\+ptr to the cost\+Map. \\
+\hline
+{\em goal} & The optional goal coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1Environment_a25f01903609749dc40aa5ae07c0f5e06}\label{classnx_1_1Environment_a25f01903609749dc40aa5ae07c0f5e06}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!Compute\+State\+Metric@{Compute\+State\+Metric}}
+\index{Compute\+State\+Metric@{Compute\+State\+Metric}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{Compute\+State\+Metric()}{ComputeStateMetric()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+virtual double \hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::Compute\+State\+Metric (\begin{DoxyParamCaption}\item[{const state \&}]{,  }\item[{const state \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the distance metric between two states. \begin{DoxyReturn}{Returns}
+The distnace between the two states. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Environment_a4f3ee5bb7665210e6262d333857e5f4f}\label{classnx_1_1Environment_a4f3ee5bb7665210e6262d333857e5f4f}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!forward\+\_\+action@{forward\+\_\+action}}
+\index{forward\+\_\+action@{forward\+\_\+action}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{forward\+\_\+action()}{forward\_action()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+virtual void \hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::forward\+\_\+action (\begin{DoxyParamCaption}\item[{const state \&}]{curr,  }\item[{int}]{action\+\_\+id,  }\item[{std\+::vector$<$ state $>$ \&}]{next\+\_\+micro }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the list of micro-\/states generated from applying the action with action\+\_\+id. 
+\begin{DoxyParams}{Parameters}
+{\em curr} & Current state. \\
+\hline
+{\em action\+\_\+id} & Action index to apply. \\
+\hline
+{\em next\+\_\+micro} & List of micro-\/states generated along the action. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classnx_1_1SE2Environment_ac9453c2a57e53c9f511eb04aabaa0809}{nx\+::\+S\+E2\+Environment}.
+
+\mbox{\Hypertarget{classnx_1_1Environment_a5879e51878691196971e94880d45b551}\label{classnx_1_1Environment_a5879e51878691196971e94880d45b551}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!get\+\_\+succ@{get\+\_\+succ}}
+\index{get\+\_\+succ@{get\+\_\+succ}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{get\+\_\+succ()}{get\_succ()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+virtual void \hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::get\+\_\+succ (\begin{DoxyParamCaption}\item[{const state \&}]{curr,  }\item[{std\+::vector$<$ state $>$ \&}]{succ,  }\item[{std\+::vector$<$ int $>$ \&}]{succ\+\_\+idx,  }\item[{std\+::vector$<$ double $>$ \&}]{succ\+\_\+cost,  }\item[{std\+::vector$<$ int $>$ \&}]{action\+\_\+idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Computes the successor nodes from state curr, taking into account the cost\+Map. 
+\begin{DoxyParams}{Parameters}
+{\em curr} & The current state. \\
+\hline
+{\em succ} & The list of successors to be computed. \\
+\hline
+{\em succ\+\_\+idx} & The linear indices of the successors. \\
+\hline
+{\em succ\+\_\+cost} & \\
+\hline
+{\em action\+\_\+idx} & \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classnx_1_1SE2Environment_a2a4159dc6bf024e522bb504c77e9aa69}{nx\+::\+S\+E2\+Environment}.
+
+\mbox{\Hypertarget{classnx_1_1Environment_adb86237d799683c40f17c95ea39eeba3}\label{classnx_1_1Environment_adb86237d799683c40f17c95ea39eeba3}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!state\+\_\+to\+\_\+cell@{state\+\_\+to\+\_\+cell}}
+\index{state\+\_\+to\+\_\+cell@{state\+\_\+to\+\_\+cell}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{state\+\_\+to\+\_\+cell()}{state\_to\_cell()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+virtual std\+::vector$<$int$>$ \hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::state\+\_\+to\+\_\+cell (\begin{DoxyParamCaption}\item[{const state \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Converts a state to its corresponding cell coordinates in the map. \begin{DoxyReturn}{Returns}
+The cell coordinates of the state. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnx_1_1SE2Environment_ae3ac780e46d421898e3c7db696d8026f}{nx\+::\+S\+E2\+Environment}.
+
+\mbox{\Hypertarget{classnx_1_1Environment_a1c558036435de03a3afd85e940aad600}\label{classnx_1_1Environment_a1c558036435de03a3afd85e940aad600}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!state\+\_\+to\+\_\+idx@{state\+\_\+to\+\_\+idx}}
+\index{state\+\_\+to\+\_\+idx@{state\+\_\+to\+\_\+idx}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{state\+\_\+to\+\_\+idx()}{state\_to\_idx()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+virtual int \hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::state\+\_\+to\+\_\+idx (\begin{DoxyParamCaption}\item[{const state \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Converts a state to its corresponding linear index in the map. \begin{DoxyReturn}{Returns}
+The linear index of the state. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnx_1_1SE2Environment_a0fe7c5f438795a98f17be0ed95b2ff7c}{nx\+::\+S\+E2\+Environment}.
+
+\mbox{\Hypertarget{classnx_1_1Environment_ae31bd7f19efac45fc07d405f1fcfd2b2}\label{classnx_1_1Environment_ae31bd7f19efac45fc07d405f1fcfd2b2}} 
+\index{nx\+::\+Environment@{nx\+::\+Environment}!state\+\_\+to\+\_\+\+S\+E2@{state\+\_\+to\+\_\+\+S\+E2}}
+\index{state\+\_\+to\+\_\+\+S\+E2@{state\+\_\+to\+\_\+\+S\+E2}!nx\+::\+Environment@{nx\+::\+Environment}}
+\subsubsection{\texorpdfstring{state\+\_\+to\+\_\+\+S\+E2()}{state\_to\_SE2()}}
+{\footnotesize\ttfamily template$<$class state$>$ \\
+virtual Vector3d \hyperlink{classnx_1_1Environment}{nx\+::\+Environment}$<$ state $>$\+::state\+\_\+to\+\_\+\+S\+E2 (\begin{DoxyParamCaption}\item[{const state \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the pose of the state, projecected into the S\+E(2) space, i.\+e. 2.\+5D position (X,Y,Yaw). \begin{DoxyReturn}{Returns}
+The S\+E(2) Pose of the state. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classnx_1_1SE2Environment_ab1f9056e6fffe905ec225ee3885679b4}{nx\+::\+S\+E2\+Environment}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/env/env\+\_\+int.\+h\end{DoxyCompactItemize}

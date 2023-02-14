@@ -1,0 +1,20 @@
+# Planner configuration
+plannerType: ARVI
+T: 14 # Prediction Horizon
+eps: .inf # Epsilon-redundancy parameter. Use .inf for infinity.
+del: 2.0 # Trajectory-crossing parameter.
+allocated_time: 1.5 # ARVI Time
+comm_range: .inf # Communication range. Use .inf for infinity.
+
+
+# Parameters not currently supported.
+avoid_collisions: 1
+robot_radius: 1
+resilience: 0
+jammed: 0
+explore: 0 # Robots use visibility exploration landmarks
+exploration_weight: .05 # Weight of exploration landmarks
+coordinate: 1 # Robots may coordinate control
+descent_iters: 1 # Rounds of Coordinate Descent
+collaborate: 1 # Robots share estimates.
+centralized: 0 # Robots use the same estimate.

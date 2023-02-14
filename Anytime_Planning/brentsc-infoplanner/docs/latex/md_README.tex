@@ -1,0 +1,82 @@
+This respository accompanies the 2018 R\+AL paper\+: \href{http://ieeexplore.ieee.org/document/8260881/}{\tt http\+://ieeexplore.\+ieee.\+org/document/8260881/}. This work considers the problem of planning trajectories for a team of mobile robots that efficiently gather information about a target process of interest. In this simulation, a number of mobile robots following a unicycle motion model with discretized motion primitives, aim to track the evolution of a number of moving targets following a double-\/integrator model driven by Gaussian noise. The algorithm is implemented in C++, and the simulation can be configured to run from the command line with C++, or with Python via Py\+Bind11 for visualization of the simulation environment.
+
+\subsection*{Dependencies}
+
+Ensure that the following dependencies are installed\+:
+
+
+\begin{DoxyItemize}
+\item Eigen3
+\item Yaml-\/\+C\+PP
+\item Pybind11
+\item C\+G\+AL
+\end{DoxyItemize}
+
+\subsection*{Compilation}
+
+\begin{DoxyVerb}cd <install_location>
+mkdir build && cd build
+cmake ..
+make
+cd ..
+\end{DoxyVerb}
+
+
+\subsection*{Example Usage in C++}
+
+Experiments can be run using C++ or M\+A\+T\+L\+AB. In C++, the configuration for the robot starting locations, sensing model, and other parameters is done in data/init\+\_\+info\+\_\+planner\+\_\+\+S\+E2.\+yaml. C\+SV files containing the resulting data are generated in the results folder.
+
+The code can be executed\+: \begin{DoxyVerb}build/bin/test_info_planner_SE2 data/init_info_planner_ARVI.yaml
+\end{DoxyVerb}
+
+
+\subsection*{Usage in Python}
+
+Note\+: Currently plotting is only supported for single robots.
+
+Run the following script\+: \begin{DoxyVerb}python script/python/pyInfo.py
+\end{DoxyVerb}
+
+
+To change the scenario file, edit the python script parameters import, i.\+e. \begin{DoxyVerb}params = IG.Parameters('data/init_info_planner_ARVI.yaml')
+\end{DoxyVerb}
+
+
+To point to the desired simulation configuration to run.
+
+\subsection*{Immediate To-\/\+Do\textquotesingle{}s}
+
+
+\begin{DoxyItemize}
+\item Clean up the way that Coordinate Descent Planning is implemented, e.\+g. by wrapping the A\+R\+VI Planner into a new Planner that takes in a team of Robots, rather than the user having to manage the Coordinate Descent algorithm themselves.
+\item Clean up the Target Model interface to neatly handle multiple targets, data association, and retrieval of belief states.
+\item Fix Python Plotting code to work for Multiple Robots
+\item Clean up State Space / E\+NV representation to allow for motion primitives on S\+E(3), and define distance metrics on the Pose types themselves, for cleaner usage in R\+VI / A\+R\+VI delta-\/crossing.
+\item Add support for Drawing obstacle maps in 2D
+\item Longer Term\+: Make Python plotting code for 3D environments..
+\end{DoxyItemize}
+
+\section*{Future Features to be supported}
+
+
+\begin{DoxyItemize}
+\item Robots and targets are both general \textquotesingle{}Agents\textquotesingle{}, which can have a full state space in S\+E(3). Robots can hold a belief (target) model, for any agents whose pose they wish to estimate (including itself). This model can be converted by the planner into a Linear Gaussian model, and used for target tracking.
+\item The above means each state Space must be convertible to S\+E(3), and vice versa. Either S\+E(3) should be the baseline, and we project down into lower spaces for control, or the other spaces exist and we lift into S\+E(3) for generic operations on the robot state. I vote for making everything S\+E(3) and projecting into lower spaces for control.
+\item Come up with a good interface for what an Agent is, and what traits it posesses. I.\+e. robot has a state Space (S\+E(3)), an action space (on some subspace of S\+E(3)), one or more sensors, a planner, which generates a trajectory, and a controller to follow the trajectory.
+\item We should include drivers for the sensors in the Sensor package, which interface between hardware and the Sensor models we have, i.\+e. Gazebo / real L\+I\+D\+AR or camera into our camera or range and bearing sensors.
+\item A R\+OS wrapper which can allow us to wrap robot topics and sensors from Gazebo into the appropriate pieces of our module.
+\item Software should be modular and split into packages that are easy to pull in, and maintained in a repository. I.\+e. Estimation, planning, Base (robots and state spaces perhaps).
+\item Scenario files. The programming task could ultimately be reduced to a user writing a new scenario file. To accomplish a particular task, the user will configure the robots and sensors appropriately, then call the appropriate planner for the scenario.
+\end{DoxyItemize}
+
+\section*{R\+OS Wrapper}
+
+
+\begin{DoxyItemize}
+\item Create a Node that maps appropriate R\+OS topics into the inputs and outputs of the regular node. (D\+O\+NE)
+\item What topics does this node subscribe to? For each robot in the team, it subscribes to a position, i.\+e. nav\+\_\+msgs/odom type. (D\+O\+NE)
+\item Right now this is a centralized planner, so spawning the planner will have to remap topics for all robots into this node. (D\+O\+NE)
+\item This should publish output velocity commands to some node, which will be remapped as determined by the simulation. (D\+O\+NE)
+\item Other world parameters needed are the map for collision checking. The remaining parameters are planner specific, or related to the robot dynamics. (D\+O\+NE)
+\item Later on, this will also subscribe to sensors in order to estimate the target. But for the very first iteration, this will be a static target with a fixed location provided by R\+OS parameters. 
+\end{DoxyItemize}

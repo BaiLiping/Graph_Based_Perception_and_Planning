@@ -1,0 +1,67 @@
+\hypertarget{classnx_1_1MultiTargetFilter}{}\section{nx\+:\+:Multi\+Target\+Filter$<$ state $>$ Class Template Reference}
+\label{classnx_1_1MultiTargetFilter}\index{nx\+::\+Multi\+Target\+Filter$<$ state $>$@{nx\+::\+Multi\+Target\+Filter$<$ state $>$}}
+
+
+{\ttfamily \#include $<$multi\+\_\+target\+\_\+filter.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Matrix\+Xd \hyperlink{classnx_1_1MultiTargetFilter_ae10c905dd3a2be6f1966a590aa5ff541}{Multi\+Target\+K\+F\+Covariance} (const \hyperlink{classnx_1_1Robot}{Robot}$<$ state $>$ \&robot, const state \&x\+\_\+t, const Vector\+Xd \&y\+\_\+t, const Matrix\+Xd \&cov\+\_\+prior)
+\item 
+static \hyperlink{structnx_1_1GaussianBelief}{Gaussian\+Belief} \hyperlink{classnx_1_1MultiTargetFilter_a40bccb9c8566afbee26054c137ff92ef}{Multi\+Target\+KF} (const std\+::vector$<$ \hyperlink{structnx_1_1Measurement}{Measurement} $>$ \&m, const \hyperlink{classnx_1_1Robot}{Robot}$<$ state $>$ \&robot, bool debug=true)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class state$>$\newline
+class nx\+::\+Multi\+Target\+Filter$<$ state $>$}
+
+The class \hyperlink{classnx_1_1MultiTargetFilter}{Multi\+Target\+Filter} manages the state estimation of a set of multiple targets from a \hyperlink{classnx_1_1TargetModel}{Target\+Model}, as estimated from a robot. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1MultiTargetFilter_a40bccb9c8566afbee26054c137ff92ef}\label{classnx_1_1MultiTargetFilter_a40bccb9c8566afbee26054c137ff92ef}} 
+\index{nx\+::\+Multi\+Target\+Filter@{nx\+::\+Multi\+Target\+Filter}!Multi\+Target\+KF@{Multi\+Target\+KF}}
+\index{Multi\+Target\+KF@{Multi\+Target\+KF}!nx\+::\+Multi\+Target\+Filter@{nx\+::\+Multi\+Target\+Filter}}
+\subsubsection{\texorpdfstring{Multi\+Target\+K\+F()}{MultiTargetKF()}}
+{\footnotesize\ttfamily template$<$class state $>$ \\
+static \hyperlink{structnx_1_1GaussianBelief}{Gaussian\+Belief} \hyperlink{classnx_1_1MultiTargetFilter}{nx\+::\+Multi\+Target\+Filter}$<$ state $>$\+::Multi\+Target\+KF (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \hyperlink{structnx_1_1Measurement}{Measurement} $>$ \&}]{m,  }\item[{const \hyperlink{classnx_1_1Robot}{Robot}$<$ state $>$ \&}]{robot,  }\item[{bool}]{debug = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Computes a full Kalman Filter update of a \hyperlink{classnx_1_1TargetModel}{Target\+Model} corresponding to the robot. 
+\begin{DoxyParams}{Parameters}
+{\em m} & The vector of Measurements from all the targets. \\
+\hline
+{\em robot} & The robot who is filtering. \\
+\hline
+{\em debug} & A flag to print out debugging messages. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The posterior \hyperlink{structnx_1_1GaussianBelief}{Gaussian\+Belief} of the target. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1MultiTargetFilter_ae10c905dd3a2be6f1966a590aa5ff541}\label{classnx_1_1MultiTargetFilter_ae10c905dd3a2be6f1966a590aa5ff541}} 
+\index{nx\+::\+Multi\+Target\+Filter@{nx\+::\+Multi\+Target\+Filter}!Multi\+Target\+K\+F\+Covariance@{Multi\+Target\+K\+F\+Covariance}}
+\index{Multi\+Target\+K\+F\+Covariance@{Multi\+Target\+K\+F\+Covariance}!nx\+::\+Multi\+Target\+Filter@{nx\+::\+Multi\+Target\+Filter}}
+\subsubsection{\texorpdfstring{Multi\+Target\+K\+F\+Covariance()}{MultiTargetKFCovariance()}}
+{\footnotesize\ttfamily template$<$class state $>$ \\
+static Matrix\+Xd \hyperlink{classnx_1_1MultiTargetFilter}{nx\+::\+Multi\+Target\+Filter}$<$ state $>$\+::Multi\+Target\+K\+F\+Covariance (\begin{DoxyParamCaption}\item[{const \hyperlink{classnx_1_1Robot}{Robot}$<$ state $>$ \&}]{robot,  }\item[{const state \&}]{x\+\_\+t,  }\item[{const Vector\+Xd \&}]{y\+\_\+t,  }\item[{const Matrix\+Xd \&}]{cov\+\_\+prior }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Computes the Kalman Filter covariance matrix for the robot given, at state x\+\_\+t, a target prediction of y\+\_\+t, and a covariance prior of cov\+\_\+prior. 
+\begin{DoxyParams}{Parameters}
+{\em robot} & The robot using the filter. \\
+\hline
+{\em x\+\_\+t} & The state to evaluate Jacobians with respect to. \\
+\hline
+{\em y\+\_\+t} & The target to evaluate Jacbians with respect to. \\
+\hline
+{\em cov\+\_\+prior} & The prior covariance matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The posterior covariance matrix. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/estimation/multi\+\_\+target\+\_\+filter.\+h\end{DoxyCompactItemize}

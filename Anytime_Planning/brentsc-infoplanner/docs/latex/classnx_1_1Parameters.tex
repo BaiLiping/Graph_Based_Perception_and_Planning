@@ -1,0 +1,305 @@
+\hypertarget{classnx_1_1Parameters}{}\section{nx\+:\+:Parameters Class Reference}
+\label{classnx_1_1Parameters}\index{nx\+::\+Parameters@{nx\+::\+Parameters}}
+
+
+{\ttfamily \#include $<$params.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structnx_1_1Parameters_1_1SystemModel}{System\+Model}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1Parameters_a40831f91ab8503eceb16026baed0892f}{Parameters} (std\+::string yaml\+\_\+file)
+\item 
+std\+::vector$<$ \hyperlink{classnx_1_1Robot}{Robot}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_ac58789b10f6377ae6e0b55c98015c147}{Get\+Robots} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_aabae7ec0743096b9980264f6613e961e}{Get\+Planner} () const
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1TargetModel}{Target\+Model} $>$ \hyperlink{classnx_1_1Parameters_a68fdc4f85de0a03a9ba56bdd99da45c7}{Get\+T\+MM} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_af844d179b3dc5e16548db00b0cc99869}\label{classnx_1_1Parameters_af844d179b3dc5e16548db00b0cc99869}} 
+std\+::string {\bfseries planner\+Config} \{\char`\"{}\char`\"{}\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_ac8c1c20732704423fbe399804c021b00}\label{classnx_1_1Parameters_ac8c1c20732704423fbe399804c021b00}} 
+std\+::string {\bfseries target\+Config} \{\char`\"{}\char`\"{}\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_aa10348194c0fe4082113b49d2f8b228c}\label{classnx_1_1Parameters_aa10348194c0fe4082113b49d2f8b228c}} 
+double {\bfseries samp} \{0.\+5\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_a6e899949aff45aed1c46402adc70ec79}\label{classnx_1_1Parameters_a6e899949aff45aed1c46402adc70ec79}} 
+int {\bfseries n\+\_\+controls} \{1\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_ae5b009532f72c310e4b7fe15d5a22f1a}\label{classnx_1_1Parameters_ae5b009532f72c310e4b7fe15d5a22f1a}} 
+double {\bfseries debug} \{0\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_a0b82013c8817d705baba62750a85dade}\label{classnx_1_1Parameters_a0b82013c8817d705baba62750a85dade}} 
+int {\bfseries log} \{0\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_a340b6318fc8b4c75451c92c004c1f1f1}\label{classnx_1_1Parameters_a340b6318fc8b4c75451c92c004c1f1f1}} 
+int {\bfseries Tmax} \{10\}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_a56ea23a4223011c419bae1798e03ca8d}\label{classnx_1_1Parameters_a56ea23a4223011c419bae1798e03ca8d}} 
+std\+::string {\bfseries output\+Path} \{\char`\"{}\char`\"{}\}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1Parameters_ac431c1270f5c5c689d3862ae73cb77eb}{Parameters} ()
+\item 
+std\+::vector$<$ \hyperlink{classnx_1_1Robot}{Robot}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_acc2af751ddee5fced21fe0f2d0a25023}{Build\+Robots} (std\+::string simulation\+\_\+yaml)
+\item 
+\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} \hyperlink{classnx_1_1Parameters_a554240e99a3763a48d2eba55a1e0eaa7}{Build\+S\+E3\+Pose} (const std\+::vector$<$ double $>$ \&input)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_a371e7560858548bc90e6e43f06a20ba2}{Build\+Planner} (std\+::string planner\+\_\+yaml)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_a1067b6207de6e2c4fe799c302bcd731b}{Build\+Planner\+A\+R\+VI} (std\+::string planner\+\_\+yaml)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model} $>$ \hyperlink{classnx_1_1Parameters_afcb2f37e60548d2c4b25382a8e1dd8a0}{Build\+Robot\+T\+MM} (std\+::string target\+\_\+yaml, int ID)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model} $>$ \hyperlink{classnx_1_1Parameters_a161d5a177f864d98b51cc4e517ba37d4}{Build\+Info\+T\+MM} (std\+::string target\+\_\+yaml)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1TargetModel}{Target\+Model} $>$ \hyperlink{classnx_1_1Parameters_acfbdaae76e98bc8379db6356d5f2078c}{Build\+T\+MM} (std\+::string target\+\_\+yaml)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Sensor}{Sensor}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_a60075d8f0a4b34c7f60e7cf0992ed413}{Build\+Sensor} (std\+::string sensor\+\_\+model)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Sensor}{Sensor}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_a7db487d62b8cbcc1ecda0ef1a8356d6a}{Build\+Sensor\+Range\+Bearing} (std\+::string sensor\+\_\+model)
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1Environment}{Environment}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ \hyperlink{classnx_1_1Parameters_a0c4e7b6182700d0b197487fff137a7db}{Build\+Environment} (std\+::string env\+\_\+model, std\+::string mprim\+\_\+yaml)
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_aa1416a85c9227ce6ecdcbad5e9f5f908}\label{classnx_1_1Parameters_aa1416a85c9227ce6ecdcbad5e9f5f908}} 
+\hyperlink{structnx_1_1Parameters_1_1SystemModel}{System\+Model} {\bfseries system\+Matrix} (double q, int dim, double cov\+\_\+pos, int velocity=0, double cov\+\_\+vel=-\/1)
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_a632252c9a761a1ad72e3a18cf9a37b29}\label{classnx_1_1Parameters_a632252c9a761a1ad72e3a18cf9a37b29}} 
+Vector\+Xd {\bfseries state\+Mat\+To\+Vector} (Matrix\+Xd y, int velocity, int target\+\_\+dim)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_ac0dc505251048e4c0167a22f7d45bebb}\label{classnx_1_1Parameters_ac0dc505251048e4c0167a22f7d45bebb}} 
+std\+::vector$<$ \hyperlink{classnx_1_1Robot}{Robot}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ {\bfseries robots}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_a9a4ef825832048d0a7c28ef8cba4cc9c}\label{classnx_1_1Parameters_a9a4ef825832048d0a7c28ef8cba4cc9c}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$ \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} $>$ $>$ {\bfseries p}
+\item 
+\mbox{\Hypertarget{classnx_1_1Parameters_acc849bc406ec19f4eab96fe8a4320ba1}\label{classnx_1_1Parameters_acc849bc406ec19f4eab96fe8a4320ba1}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{classnx_1_1TargetModel}{Target\+Model} $>$ {\bfseries world}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classnx_1_1Parameters}{Parameters} class is capable of reading in high level descriptions of a multi-\/robot Information Gathering simulation, and configuring the team of robots, target environment, and a planner for solving information gathering tasks. This class is the preferred way to generate simulations in this library. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnx_1_1Parameters_a40831f91ab8503eceb16026baed0892f}\label{classnx_1_1Parameters_a40831f91ab8503eceb16026baed0892f}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Parameters()}{Parameters()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily nx\+::\+Parameters\+::\+Parameters (\begin{DoxyParamCaption}\item[{std\+::string}]{yaml\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Loads all simulation parameters from a top level Y\+A\+ML file. 
+\begin{DoxyParams}{Parameters}
+{\em yaml\+\_\+file} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnx_1_1Parameters_ac431c1270f5c5c689d3862ae73cb77eb}\label{classnx_1_1Parameters_ac431c1270f5c5c689d3862ae73cb77eb}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Parameters@{Parameters}}
+\index{Parameters@{Parameters}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Parameters()}{Parameters()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily nx\+::\+Parameters\+::\+Parameters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Default Constructor 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1Parameters_a0c4e7b6182700d0b197487fff137a7db}\label{classnx_1_1Parameters_a0c4e7b6182700d0b197487fff137a7db}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Environment@{Build\+Environment}}
+\index{Build\+Environment@{Build\+Environment}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Environment()}{BuildEnvironment()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1Environment}{Environment}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Build\+Environment (\begin{DoxyParamCaption}\item[{std\+::string}]{env\+\_\+model,  }\item[{std\+::string}]{mprim\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Constructs a Range-\/\+Only sensor model from a Y\+A\+ML configuration file 
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+model} & The path to the filename of the sensor configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed Range-\/\+Only sensor. Constructs a Camera sensor from a given Y\+A\+ML configuration file. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+model} & The path to the filename of the sensor configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed Camera \hyperlink{classnx_1_1Sensor}{Sensor}. Builds the environment for individual robots, based on a global environment configuration and the robot\textquotesingle{}s unique motion primitives. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em env\+Model} & The global environment configuration. \\
+\hline
+{\em mprim\+\_\+yaml} & The robots unique motion primitives. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the environment data structure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a161d5a177f864d98b51cc4e517ba37d4}\label{classnx_1_1Parameters_a161d5a177f864d98b51cc4e517ba37d4}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Info\+T\+MM@{Build\+Info\+T\+MM}}
+\index{Build\+Info\+T\+MM@{Build\+Info\+T\+MM}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Info\+T\+M\+M()}{BuildInfoTMM()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model}$>$ nx\+::\+Parameters\+::\+Build\+Info\+T\+MM (\begin{DoxyParamCaption}\item[{std\+::string}]{target\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds an \hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model}, which is an extension of the \hyperlink{structnx_1_1Target}{Target} Motion Model containing a belief state. 
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+yaml} & The Y\+A\+ML file of the Info\+T\+MM to be built. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the Info \hyperlink{structnx_1_1Target}{Target} Model. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a371e7560858548bc90e6e43f06a20ba2}\label{classnx_1_1Parameters_a371e7560858548bc90e6e43f06a20ba2}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Planner@{Build\+Planner}}
+\index{Build\+Planner@{Build\+Planner}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Planner()}{BuildPlanner()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Build\+Planner (\begin{DoxyParamCaption}\item[{std\+::string}]{planner\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds a generic Planner type from a Y\+A\+ML configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em planner\+\_\+yaml} & String path to the planner configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed Planner. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a1067b6207de6e2c4fe799c302bcd731b}\label{classnx_1_1Parameters_a1067b6207de6e2c4fe799c302bcd731b}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Planner\+A\+R\+VI@{Build\+Planner\+A\+R\+VI}}
+\index{Build\+Planner\+A\+R\+VI@{Build\+Planner\+A\+R\+VI}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Planner\+A\+R\+V\+I()}{BuildPlannerARVI()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Build\+Planner\+A\+R\+VI (\begin{DoxyParamCaption}\item[{std\+::string}]{planner\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds an A\+R\+VI Planner from a Y\+A\+ML configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em planner\+\_\+yaml} & String path to the Y\+A\+ML configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed Planner. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_acc2af751ddee5fced21fe0f2d0a25023}\label{classnx_1_1Parameters_acc2af751ddee5fced21fe0f2d0a25023}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Robots@{Build\+Robots}}
+\index{Build\+Robots@{Build\+Robots}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Robots()}{BuildRobots()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classnx_1_1Robot}{Robot}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Build\+Robots (\begin{DoxyParamCaption}\item[{std\+::string}]{simulation\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds a set of robots configured for the desired simulation. 
+\begin{DoxyParams}{Parameters}
+{\em simulation\+\_\+yaml} & The high level scenario file describing the simulation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of constructed robots. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_afcb2f37e60548d2c4b25382a8e1dd8a0}\label{classnx_1_1Parameters_afcb2f37e60548d2c4b25382a8e1dd8a0}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Robot\+T\+MM@{Build\+Robot\+T\+MM}}
+\index{Build\+Robot\+T\+MM@{Build\+Robot\+T\+MM}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Robot\+T\+M\+M()}{BuildRobotTMM()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1InfoTargetModel}{Info\+Target\+Model}$>$ nx\+::\+Parameters\+::\+Build\+Robot\+T\+MM (\begin{DoxyParamCaption}\item[{std\+::string}]{target\+\_\+yaml,  }\item[{int}]{ID }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds a Robots \hyperlink{structnx_1_1Target}{Target} Motion Model. 
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+yaml} & The string of the \hyperlink{structnx_1_1Target}{Target} Model to be configured. \\
+\hline
+{\em ID} & ID number of the \hyperlink{classnx_1_1Robot}{Robot} being built for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed \hyperlink{structnx_1_1Target}{Target} Motion Model. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a554240e99a3763a48d2eba55a1e0eaa7}\label{classnx_1_1Parameters_a554240e99a3763a48d2eba55a1e0eaa7}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+S\+E3\+Pose@{Build\+S\+E3\+Pose}}
+\index{Build\+S\+E3\+Pose@{Build\+S\+E3\+Pose}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+S\+E3\+Pose()}{BuildSE3Pose()}}
+{\footnotesize\ttfamily \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} nx\+::\+Parameters\+::\+Build\+S\+E3\+Pose (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds an \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} object from an (X,Y, Z, Yaw) pair. \begin{DoxyReturn}{Returns}
+The desired \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a60075d8f0a4b34c7f60e7cf0992ed413}\label{classnx_1_1Parameters_a60075d8f0a4b34c7f60e7cf0992ed413}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Sensor@{Build\+Sensor}}
+\index{Build\+Sensor@{Build\+Sensor}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Sensor()}{BuildSensor()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1Sensor}{Sensor}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Build\+Sensor (\begin{DoxyParamCaption}\item[{std\+::string}]{sensor\+\_\+model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds a generic \hyperlink{classnx_1_1Sensor}{Sensor} type from a Y\+A\+ML configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+model} & The Y\+A\+ML containing the specification of the desired sensor. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sensor constructed from the file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a7db487d62b8cbcc1ecda0ef1a8356d6a}\label{classnx_1_1Parameters_a7db487d62b8cbcc1ecda0ef1a8356d6a}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+Sensor\+Range\+Bearing@{Build\+Sensor\+Range\+Bearing}}
+\index{Build\+Sensor\+Range\+Bearing@{Build\+Sensor\+Range\+Bearing}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+Sensor\+Range\+Bearing()}{BuildSensorRangeBearing()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1Sensor}{Sensor}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Build\+Sensor\+Range\+Bearing (\begin{DoxyParamCaption}\item[{std\+::string}]{sensor\+\_\+model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Constructs a Range-\/\+Bearing sensor model from a Y\+A\+ML configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em sensor\+\_\+model} & The path to the filename of the sensor configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed Range-\/\+Bearing sensor. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_acfbdaae76e98bc8379db6356d5f2078c}\label{classnx_1_1Parameters_acfbdaae76e98bc8379db6356d5f2078c}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Build\+T\+MM@{Build\+T\+MM}}
+\index{Build\+T\+MM@{Build\+T\+MM}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Build\+T\+M\+M()}{BuildTMM()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1TargetModel}{Target\+Model}$>$ nx\+::\+Parameters\+::\+Build\+T\+MM (\begin{DoxyParamCaption}\item[{std\+::string}]{target\+\_\+yaml }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Builds the \hyperlink{structnx_1_1Target}{Target} Motion Model from a Y\+A\+ML configuration file. 
+\begin{DoxyParams}{Parameters}
+{\em target\+\_\+yaml} & The path to the Y\+A\+ML configuration file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the constructed \hyperlink{structnx_1_1Target}{Target} Motion Model. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_aabae7ec0743096b9980264f6613e961e}\label{classnx_1_1Parameters_aabae7ec0743096b9980264f6613e961e}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Get\+Planner@{Get\+Planner}}
+\index{Get\+Planner@{Get\+Planner}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Get\+Planner()}{GetPlanner()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Get\+Planner (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the construted planner for the simulation. \begin{DoxyReturn}{Returns}
+The constructed planner. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_ac58789b10f6377ae6e0b55c98015c147}\label{classnx_1_1Parameters_ac58789b10f6377ae6e0b55c98015c147}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Get\+Robots@{Get\+Robots}}
+\index{Get\+Robots@{Get\+Robots}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Get\+Robots()}{GetRobots()}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{classnx_1_1Robot}{Robot}$<$\hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose}$>$ $>$ nx\+::\+Parameters\+::\+Get\+Robots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the vector of simulation robots. \begin{DoxyReturn}{Returns}
+The vector of robots. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1Parameters_a68fdc4f85de0a03a9ba56bdd99da45c7}\label{classnx_1_1Parameters_a68fdc4f85de0a03a9ba56bdd99da45c7}} 
+\index{nx\+::\+Parameters@{nx\+::\+Parameters}!Get\+T\+MM@{Get\+T\+MM}}
+\index{Get\+T\+MM@{Get\+T\+MM}!nx\+::\+Parameters@{nx\+::\+Parameters}}
+\subsubsection{\texorpdfstring{Get\+T\+M\+M()}{GetTMM()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{classnx_1_1TargetModel}{Target\+Model}$>$ nx\+::\+Parameters\+::\+Get\+T\+MM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the target motion model. \begin{DoxyReturn}{Returns}
+The target motion model. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/params.\+h\end{DoxyCompactItemize}

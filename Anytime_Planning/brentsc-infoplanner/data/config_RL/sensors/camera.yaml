@@ -1,0 +1,9 @@
+sensorType: camera
+# Height and Width of pixels
+height: 320
+width: 480
+# Intrinsic Calibration Matrix
+K:
+- [311.0520, 0, 201.8724]
+- [0, 311.3885, 113.6210]
+off_file: data/config/fla_warehouse1.off # For ray-tracing detectability.

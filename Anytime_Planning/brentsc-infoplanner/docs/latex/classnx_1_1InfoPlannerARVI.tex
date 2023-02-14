@@ -1,0 +1,50 @@
+\hypertarget{classnx_1_1InfoPlannerARVI}{}\section{nx\+:\+:Info\+Planner\+A\+R\+VI$<$ state $>$ Class Template Reference}
+\label{classnx_1_1InfoPlannerARVI}\index{nx\+::\+Info\+Planner\+A\+R\+V\+I$<$ state $>$@{nx\+::\+Info\+Planner\+A\+R\+V\+I$<$ state $>$}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1InfoPlannerARVI_abb908254580047ad273b6f9b9a8caf24}{Info\+Planner\+A\+R\+VI} (const int \&T, const double \&del=5, const double \&epsilon=std\+::numeric\+\_\+limits$<$ double $>$\+::infinity(), const double \&range=std\+::numeric\+\_\+limits$<$ double $>$\+::infinity(), const double \&allocated\+\_\+time\+\_\+secs=0.\+1, const int \&debug=0)
+\item 
+\mbox{\Hypertarget{classnx_1_1InfoPlannerARVI_a77fdbe59f157d0fef34118ad4655470e}\label{classnx_1_1InfoPlannerARVI_a77fdbe59f157d0fef34118ad4655470e}} 
+\hyperlink{structnx_1_1PlannerOutput}{Planner\+Output}$<$ state $>$ {\bfseries Plan} (std\+::vector$<$ \hyperlink{classnx_1_1Robot}{nx\+::\+Robot}$<$ state $>$$>$ \&robots, int num, std\+::vector$<$ std\+::vector$<$ Vector\+Xd $>$$>$ fixed\+\_\+traj)
+\item 
+\mbox{\Hypertarget{classnx_1_1InfoPlannerARVI_a697b6b64459863124c7ef3f7daba7dc3}\label{classnx_1_1InfoPlannerARVI_a697b6b64459863124c7ef3f7daba7dc3}} 
+\hyperlink{structnx_1_1PlannerOutput}{Planner\+Output}$<$ state $>$ {\bfseries PlanARVI\+Test} (std\+::vector$<$ \hyperlink{classnx_1_1Robot}{nx\+::\+Robot}$<$ state $>$$>$ \&robots, int num)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classnx_1_1InfoPlannerARVI_a471fe0c7b071380a34b309595441e1b6}\label{classnx_1_1InfoPlannerARVI_a471fe0c7b071380a34b309595441e1b6}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{structnx_1_1InfoStateSpace}{Info\+State\+Space}$<$ state $>$ $>$ {\bfseries S\+\_\+t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnx_1_1InfoPlannerARVI_abb908254580047ad273b6f9b9a8caf24}\label{classnx_1_1InfoPlannerARVI_abb908254580047ad273b6f9b9a8caf24}} 
+\index{nx\+::\+Info\+Planner\+A\+R\+VI@{nx\+::\+Info\+Planner\+A\+R\+VI}!Info\+Planner\+A\+R\+VI@{Info\+Planner\+A\+R\+VI}}
+\index{Info\+Planner\+A\+R\+VI@{Info\+Planner\+A\+R\+VI}!nx\+::\+Info\+Planner\+A\+R\+VI@{nx\+::\+Info\+Planner\+A\+R\+VI}}
+\subsubsection{\texorpdfstring{Info\+Planner\+A\+R\+V\+I()}{InfoPlanner()}}
+{\footnotesize\ttfamily template$<$class state $>$ \\
+\hyperlink{classnx_1_1InfoPlannerARVI}{nx\+::\+Info\+Planner\+A\+R\+VI}$<$ state $>$\+::\hyperlink{classnx_1_1InfoPlannerARVI}{Info\+Planner\+A\+R\+VI} (\begin{DoxyParamCaption}\item[{const int \&}]{T,  }\item[{const double \&}]{del = {\ttfamily 5},  }\item[{const double \&}]{epsilon = {\ttfamily std\+:\+:numeric\+\_\+limits$<$double$>$\+:\+:infinity()},  }\item[{const double \&}]{range = {\ttfamily std\+:\+:numeric\+\_\+limits$<$double$>$\+:\+:infinity()},  }\item[{const double \&}]{allocated\+\_\+time\+\_\+secs = {\ttfamily 0.1},  }\item[{const int \&}]{debug = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an A\+R\+VI Planner. 
+\begin{DoxyParams}{Parameters}
+{\em T} & The planning horizon. \\
+\hline
+{\em del} & The initial value of delta. \\
+\hline
+{\em epsilon} & The initial value of epsilon. \\
+\hline
+{\em range} & Radius with which robots may plan jointly. \\
+\hline
+{\em allocated\+\_\+time\+\_\+secs} & Allocated A\+R\+VI Planning time. \\
+\hline
+{\em debug} & Whether the planner should print debug messages. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/planning/infoplanner\+\_\+arvi.\+h\item 
+src/infoplanner\+\_\+arvi.\+cpp\end{DoxyCompactItemize}

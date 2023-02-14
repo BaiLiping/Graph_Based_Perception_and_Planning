@@ -1,0 +1,13 @@
+# Target Model Configuration
+targetModel: adversarial
+velocity: 0 # Flag to enable velocity estimation. DISABLED FOR NOW.
+use_prior: 1 # Give robots a prior on the target state.
+target_dim: 3
+env_da: [100, 200] # Data association for each robot.
+y0: # Here initial positions are given. (X, Y, Z).
+- [2, 1, 1]
+- [-2, -1, 5]
+n_targets: 2 # Number of Targets
+q: .5 # Diffusion / Noise parameter for motion model
+cov_pos: 2 # Prior covariance to give a new target pose. (Diagonal entries)
+cov_vel: .1 # Prior covariance for new target velocity.

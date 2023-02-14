@@ -1,0 +1,10 @@
+# FLA Warehouse world
+# in meters (dae)
+mapmin: [-11.25739348144532, -12.21107829284668, -0.2440558395385746] # X,Y,Z
+mapmax: [74.16280651855469, 19.10712170715332,  6.232944160461425 ]
+mapres: [0.0762, 0.0762, 0.0762]
+origin: [31.45270651855468, 3.44802170715332, 2.994444160461426]
+origincells: [560, 205, 42]
+datatype: c
+storage: rowmajor
+mappath: fla_warehouse1.cfg

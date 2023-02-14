@@ -1,0 +1,27 @@
+# Configure the active robots.
+Robots:
+- ID: 40
+  initialState: [0, 0, 0, 0] # (X,Y,Z, Yaw)
+  robotConfig: data/config/robots/ddConfig.yaml
+- ID: 200
+  initialState: [5, 0, 0, 1.57]
+  robotConfig: data/config/robots/scarabConfig.yaml
+
+# Link to other configuration files
+worldConfig: data/maps/emptySmall/emptyMap.yaml
+#worldConfig: data/maps/fla_warehouse1/fla_warehouse1.yaml
+plannerConfig: data/config/planners/plannerARVI.yaml
+targetConfig: data/config/targetModels/targetModel.yaml
+
+# Global Parameters
+samp: .5 # Sampling period for robots and targets
+n_controls: 5 # Re-planning time.
+Tmax: 10 # Length of Mission
+
+# Logging Parameters
+debug: 1
+log: 1 # Save CSV files
+estimation_only: 0 # Flag to perform estimation only using robot positions from the path below.
+# Path to realtime_data for estimation only.
+realtime_data: /home/brent/ws_soa/src/onr_soa/soa_track_targets/quadrotor_Experiment_data/video_data
+outputpath: ./Results_temp

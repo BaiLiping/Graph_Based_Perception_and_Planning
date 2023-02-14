@@ -1,0 +1,72 @@
+\hypertarget{classnx_1_1KalmanFilter}{}\section{nx\+:\+:Kalman\+Filter Class Reference}
+\label{classnx_1_1KalmanFilter}\index{nx\+::\+Kalman\+Filter@{nx\+::\+Kalman\+Filter}}
+
+
+{\ttfamily \#include $<$kalman\+\_\+filter.\+h$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Matrix\+Xd \hyperlink{classnx_1_1KalmanFilter_a1335cc928085a2c01b6a6a0d56e36903}{K\+F\+Covariance} (const Matrix\+Xd \&cov\+\_\+prior, const Matrix\+Xd \&A, const Matrix\+Xd \&W, const Matrix\+Xd \&H, const Matrix\+Xd \&V)
+\item 
+static \hyperlink{structnx_1_1GaussianBelief}{Gaussian\+Belief} \hyperlink{classnx_1_1KalmanFilter_a3c58332273552a6ea9133c54f3f74986}{KF} (const Vector\+Xd \&innovation, const Vector\+Xd \&mean\+\_\+prior, const Matrix\+Xd \&cov\+\_\+prior, const Matrix\+Xd \&A, const Matrix\+Xd \&W, const Matrix\+Xd \&H, const Matrix\+Xd \&V, int debug=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classnx_1_1KalmanFilter}{Kalman\+Filter} class contains static methods which execute the predict and update steps of a Kalman Filter, both with and without measurements. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1KalmanFilter_a3c58332273552a6ea9133c54f3f74986}\label{classnx_1_1KalmanFilter_a3c58332273552a6ea9133c54f3f74986}} 
+\index{nx\+::\+Kalman\+Filter@{nx\+::\+Kalman\+Filter}!KF@{KF}}
+\index{KF@{KF}!nx\+::\+Kalman\+Filter@{nx\+::\+Kalman\+Filter}}
+\subsubsection{\texorpdfstring{K\+F()}{KF()}}
+{\footnotesize\ttfamily static \hyperlink{structnx_1_1GaussianBelief}{Gaussian\+Belief} nx\+::\+Kalman\+Filter\+::\+KF (\begin{DoxyParamCaption}\item[{const Vector\+Xd \&}]{innovation,  }\item[{const Vector\+Xd \&}]{mean\+\_\+prior,  }\item[{const Matrix\+Xd \&}]{cov\+\_\+prior,  }\item[{const Matrix\+Xd \&}]{A,  }\item[{const Matrix\+Xd \&}]{W,  }\item[{const Matrix\+Xd \&}]{H,  }\item[{const Matrix\+Xd \&}]{V,  }\item[{int}]{debug = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+The KF function takes as input the innovation vector, and prior Gaussian distribution to compute the Kalman Filter prediction and update steps to compute a posterior Gaussian distribution. 
+\begin{DoxyParams}{Parameters}
+{\em innovation} & The innovation vector, i.\+e. z -\/ h(mean). \\
+\hline
+{\em mean\+\_\+prior} & The prior mean. \\
+\hline
+{\em cov\+\_\+prior} & The prior covariance matrix. \\
+\hline
+{\em A} & The system dynamics matrix. \\
+\hline
+{\em W} & The system noise matrix. \\
+\hline
+{\em H} & The observation model matrix. \\
+\hline
+{\em V} & The observation model noise matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The posterior Gaussian belief. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1KalmanFilter_a1335cc928085a2c01b6a6a0d56e36903}\label{classnx_1_1KalmanFilter_a1335cc928085a2c01b6a6a0d56e36903}} 
+\index{nx\+::\+Kalman\+Filter@{nx\+::\+Kalman\+Filter}!K\+F\+Covariance@{K\+F\+Covariance}}
+\index{K\+F\+Covariance@{K\+F\+Covariance}!nx\+::\+Kalman\+Filter@{nx\+::\+Kalman\+Filter}}
+\subsubsection{\texorpdfstring{K\+F\+Covariance()}{KFCovariance()}}
+{\footnotesize\ttfamily static Matrix\+Xd nx\+::\+Kalman\+Filter\+::\+K\+F\+Covariance (\begin{DoxyParamCaption}\item[{const Matrix\+Xd \&}]{cov\+\_\+prior,  }\item[{const Matrix\+Xd \&}]{A,  }\item[{const Matrix\+Xd \&}]{W,  }\item[{const Matrix\+Xd \&}]{H,  }\item[{const Matrix\+Xd \&}]{V }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+The K\+F\+Covariance function takes as input a prior covariance matrix, and computes the Kalman filter prediction and update steps to calculate the posterior covariance matrix. Note that the covariance posterior is deterministic and does not depend on the measurement values. 
+\begin{DoxyParams}{Parameters}
+{\em cov\+\_\+prior} & The prior covariance matrix. \\
+\hline
+{\em A} & The system dynamics matrix. \\
+\hline
+{\em W} & The system noise matrix. \\
+\hline
+{\em H} & The observation model matrix. \\
+\hline
+{\em V} & The observation model noise matrix. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The posterior covariance matrix. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/estimation/kalman\+\_\+filter.\+h\end{DoxyCompactItemize}

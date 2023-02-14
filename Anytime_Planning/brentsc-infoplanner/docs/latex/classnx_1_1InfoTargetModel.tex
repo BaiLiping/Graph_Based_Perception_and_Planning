@@ -1,0 +1,112 @@
+\hypertarget{classnx_1_1InfoTargetModel}{}\section{nx\+:\+:Info\+Target\+Model Class Reference}
+\label{classnx_1_1InfoTargetModel}\index{nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}}
+
+
+{\ttfamily \#include $<$info\+\_\+target\+\_\+model.\+h$>$}
+
+
+
+Inheritance diagram for nx\+:\+:Info\+Target\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classnx_1_1InfoTargetModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for nx\+:\+:Info\+Target\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classnx_1_1InfoTargetModel__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classnx_1_1InfoTargetModel_a23f4a00fd334292a91af451f2278310d}{Info\+Target\+Model} ()
+\item 
+\mbox{\Hypertarget{classnx_1_1InfoTargetModel_add9b3da880f99e8a0eb8a28921792bfa}\label{classnx_1_1InfoTargetModel_add9b3da880f99e8a0eb8a28921792bfa}} 
+bool {\bfseries Add\+Target} (int ID, const \hyperlink{structnx_1_1InfoTarget}{Info\+Target} \&target)
+\item 
+Matrix\+Xd \hyperlink{classnx_1_1InfoTargetModel_a9387b0bd4e3e6d59570be7e7b369f792}{Get\+Covariance\+Matrix} () const
+\item 
+void \hyperlink{classnx_1_1InfoTargetModel_ab5c829223d48549889ef74d10bb8c408}{Update\+Belief} (Vector\+Xd mean, Matrix\+Xd covariance)
+\item 
+void \hyperlink{classnx_1_1InfoTargetModel_a371e2e95065f12fb672063eef87fa8c7}{Get\+Jacobian} (Matrix\+Xd \&A\+\_\+, Matrix\+Xd \&W\+\_\+) const
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{structnx_1_1InfoTarget}{Info\+Target} $>$ \hyperlink{classnx_1_1InfoTargetModel_add48b716a418b07c386cbe4726671540}{Get\+Target\+By\+ID} (int ID) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The info\+Target\+Model class extends target\+Model in order to maintain a Gaussian distribution over the target state (mean, and covariance). This is useful for a robot\textquotesingle{}s internal representation of the target. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnx_1_1InfoTargetModel_a23f4a00fd334292a91af451f2278310d}\label{classnx_1_1InfoTargetModel_a23f4a00fd334292a91af451f2278310d}} 
+\index{nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}!Info\+Target\+Model@{Info\+Target\+Model}}
+\index{Info\+Target\+Model@{Info\+Target\+Model}!nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}}
+\subsubsection{\texorpdfstring{Info\+Target\+Model()}{InfoTargetModel()}}
+{\footnotesize\ttfamily nx\+::\+Info\+Target\+Model\+::\+Info\+Target\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default Constructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classnx_1_1InfoTargetModel_a9387b0bd4e3e6d59570be7e7b369f792}\label{classnx_1_1InfoTargetModel_a9387b0bd4e3e6d59570be7e7b369f792}} 
+\index{nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}!Get\+Covariance\+Matrix@{Get\+Covariance\+Matrix}}
+\index{Get\+Covariance\+Matrix@{Get\+Covariance\+Matrix}!nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}}
+\subsubsection{\texorpdfstring{Get\+Covariance\+Matrix()}{GetCovarianceMatrix()}}
+{\footnotesize\ttfamily Matrix\+Xd nx\+::\+Info\+Target\+Model\+::\+Get\+Covariance\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the joint system matrix A of the target model. \begin{DoxyReturn}{Returns}
+The system matrix. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1InfoTargetModel_a371e2e95065f12fb672063eef87fa8c7}\label{classnx_1_1InfoTargetModel_a371e2e95065f12fb672063eef87fa8c7}} 
+\index{nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}!Get\+Jacobian@{Get\+Jacobian}}
+\index{Get\+Jacobian@{Get\+Jacobian}!nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}}
+\subsubsection{\texorpdfstring{Get\+Jacobian()}{GetJacobian()}}
+{\footnotesize\ttfamily void nx\+::\+Info\+Target\+Model\+::\+Get\+Jacobian (\begin{DoxyParamCaption}\item[{Matrix\+Xd \&}]{A\+\_\+,  }\item[{Matrix\+Xd \&}]{W\+\_\+ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assigns the Jacobian for the \hyperlink{structnx_1_1Target}{Target} motion model. 
+\begin{DoxyParams}{Parameters}
+{\em A\+\_\+} & \\
+\hline
+{\em W\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classnx_1_1InfoTargetModel_add48b716a418b07c386cbe4726671540}\label{classnx_1_1InfoTargetModel_add48b716a418b07c386cbe4726671540}} 
+\index{nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}!Get\+Target\+By\+ID@{Get\+Target\+By\+ID}}
+\index{Get\+Target\+By\+ID@{Get\+Target\+By\+ID}!nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}}
+\subsubsection{\texorpdfstring{Get\+Target\+By\+I\+D()}{GetTargetByID()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\hyperlink{structnx_1_1InfoTarget}{Info\+Target}$>$ nx\+::\+Info\+Target\+Model\+::\+Get\+Target\+By\+ID (\begin{DoxyParamCaption}\item[{int}]{ID }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the \hyperlink{structnx_1_1InfoTarget}{Info\+Target} by ID 
+\begin{DoxyParams}{Parameters}
+{\em ID} & The ID of the target to return. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \hyperlink{structnx_1_1InfoTarget}{Info\+Target} queried for. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classnx_1_1InfoTargetModel_ab5c829223d48549889ef74d10bb8c408}\label{classnx_1_1InfoTargetModel_ab5c829223d48549889ef74d10bb8c408}} 
+\index{nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}!Update\+Belief@{Update\+Belief}}
+\index{Update\+Belief@{Update\+Belief}!nx\+::\+Info\+Target\+Model@{nx\+::\+Info\+Target\+Model}}
+\subsubsection{\texorpdfstring{Update\+Belief()}{UpdateBelief()}}
+{\footnotesize\ttfamily void nx\+::\+Info\+Target\+Model\+::\+Update\+Belief (\begin{DoxyParamCaption}\item[{Vector\+Xd}]{mean,  }\item[{Matrix\+Xd}]{covariance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Updates the Information State of the \hyperlink{structnx_1_1Target}{Target} Model. 
+\begin{DoxyParams}{Parameters}
+{\em y\+\_\+} & The new mean. \\
+\hline
+{\em Sigma\+\_\+} & The new covariance. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/target\+\_\+motion\+\_\+models/info\+\_\+target\+\_\+model.\+h\end{DoxyCompactItemize}

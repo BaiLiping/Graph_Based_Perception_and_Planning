@@ -1,0 +1,132 @@
+\hypertarget{structnx_1_1SE3Pose}{}\section{nx\+:\+:S\+E3\+Pose Struct Reference}
+\label{structnx_1_1SE3Pose}\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+
+
+{\ttfamily \#include $<$se3\+\_\+pose.\+h$>$}
+
+
+
+Collaboration diagram for nx\+:\+:S\+E3\+Pose\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{structnx_1_1SE3Pose__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classnx_1_1SE3Pose_1_1InvalidOrientation}{Invalid\+Orientation}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnx_1_1SE3Pose_ad53ace38f70c31c09e994404470cafc5}{S\+E3\+Pose} ()
+\item 
+\hyperlink{structnx_1_1SE3Pose_aedb0fbcfde8aaad17536e6401a70016f}{S\+E3\+Pose} (const Vector3d \&position, const Matrix3d \&orientation)
+\item 
+\hyperlink{structnx_1_1SE3Pose_a4dadedbf18209a190442ab3e5a9717da}{S\+E3\+Pose} (const Vector3d \&position, const Vector4d \&quaternion)
+\item 
+double \hyperlink{structnx_1_1SE3Pose_a103674ebbf5d7e62b9ead5131bbdd289}{get\+Yaw} () const
+\item 
+double \hyperlink{structnx_1_1SE3Pose_a98a2f187d971144630219e2f6a989f55}{get\+Pitch} () const
+\item 
+double \hyperlink{structnx_1_1SE3Pose_afe22fcd642b968043a5e8ef1d284ee39}{get\+Roll} () const
+\item 
+Vector3d \hyperlink{structnx_1_1SE3Pose_a1796e8aafcf90da2e6b0d07ca4c7135f}{get\+S\+E2} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a5620730d3946d81d71ba61d75653747d}\label{structnx_1_1SE3Pose_a5620730d3946d81d71ba61d75653747d}} 
+\hyperlink{classnx_1_1SE3Pose_1_1InvalidOrientation}{nx\+::\+S\+E3\+Pose\+::\+Invalid\+Orientation} {\bfseries Invalid\+Orientation\+Created}
+\item 
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a601d780745bfa4076ae444bce9360caf}\label{structnx_1_1SE3Pose_a601d780745bfa4076ae444bce9360caf}} 
+Vector3d {\bfseries position} \{0, 0, 0\}
+\item 
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a18492df5af5d735b5d21257c23bb5eca}\label{structnx_1_1SE3Pose_a18492df5af5d735b5d21257c23bb5eca}} 
+Matrix3d {\bfseries orientation} \{Matrix3d\+::\+Identity()\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+S\+E3\+State stores position and orientation of a rigid body with respect to a world frame. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnx_1_1SE3Pose_ad53ace38f70c31c09e994404470cafc5}\label{structnx_1_1SE3Pose_ad53ace38f70c31c09e994404470cafc5}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!S\+E3\+Pose@{S\+E3\+Pose}}
+\index{S\+E3\+Pose@{S\+E3\+Pose}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{S\+E3\+Pose()}{SE3Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily nx\+::\+S\+E3\+Pose\+::\+S\+E3\+Pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default Ctor. \mbox{\Hypertarget{structnx_1_1SE3Pose_aedb0fbcfde8aaad17536e6401a70016f}\label{structnx_1_1SE3Pose_aedb0fbcfde8aaad17536e6401a70016f}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!S\+E3\+Pose@{S\+E3\+Pose}}
+\index{S\+E3\+Pose@{S\+E3\+Pose}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{S\+E3\+Pose()}{SE3Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily nx\+::\+S\+E3\+Pose\+::\+S\+E3\+Pose (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{position,  }\item[{const Matrix3d \&}]{orientation }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} from a position and orientation matrix. 
+\begin{DoxyParams}{Parameters}
+{\em position} & The position. \\
+\hline
+{\em orientation} & The orientation as a matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a4dadedbf18209a190442ab3e5a9717da}\label{structnx_1_1SE3Pose_a4dadedbf18209a190442ab3e5a9717da}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!S\+E3\+Pose@{S\+E3\+Pose}}
+\index{S\+E3\+Pose@{S\+E3\+Pose}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{S\+E3\+Pose()}{SE3Pose()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily nx\+::\+S\+E3\+Pose\+::\+S\+E3\+Pose (\begin{DoxyParamCaption}\item[{const Vector3d \&}]{position,  }\item[{const Vector4d \&}]{quaternion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs an \hyperlink{structnx_1_1SE3Pose}{S\+E3\+Pose} from a position and quaternion. 
+\begin{DoxyParams}{Parameters}
+{\em position} & The position. \\
+\hline
+{\em quaternion} & The orientation as a quaternion. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a98a2f187d971144630219e2f6a989f55}\label{structnx_1_1SE3Pose_a98a2f187d971144630219e2f6a989f55}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!get\+Pitch@{get\+Pitch}}
+\index{get\+Pitch@{get\+Pitch}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{get\+Pitch()}{getPitch()}}
+{\footnotesize\ttfamily double nx\+::\+S\+E3\+Pose\+::get\+Pitch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Pitch of the orientation. \begin{DoxyReturn}{Returns}
+The pitch. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnx_1_1SE3Pose_afe22fcd642b968043a5e8ef1d284ee39}\label{structnx_1_1SE3Pose_afe22fcd642b968043a5e8ef1d284ee39}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!get\+Roll@{get\+Roll}}
+\index{get\+Roll@{get\+Roll}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{get\+Roll()}{getRoll()}}
+{\footnotesize\ttfamily double nx\+::\+S\+E3\+Pose\+::get\+Roll (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Roll of the orientation. \begin{DoxyReturn}{Returns}
+The roll. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a1796e8aafcf90da2e6b0d07ca4c7135f}\label{structnx_1_1SE3Pose_a1796e8aafcf90da2e6b0d07ca4c7135f}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!get\+S\+E2@{get\+S\+E2}}
+\index{get\+S\+E2@{get\+S\+E2}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{get\+S\+E2()}{getSE2()}}
+{\footnotesize\ttfamily Vector3d nx\+::\+S\+E3\+Pose\+::get\+S\+E2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the S\+E(2) projection of the full S\+E(3) Pose. \begin{DoxyReturn}{Returns}
+The S\+E(2) pose. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structnx_1_1SE3Pose_a103674ebbf5d7e62b9ead5131bbdd289}\label{structnx_1_1SE3Pose_a103674ebbf5d7e62b9ead5131bbdd289}} 
+\index{nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}!get\+Yaw@{get\+Yaw}}
+\index{get\+Yaw@{get\+Yaw}!nx\+::\+S\+E3\+Pose@{nx\+::\+S\+E3\+Pose}}
+\subsubsection{\texorpdfstring{get\+Yaw()}{getYaw()}}
+{\footnotesize\ttfamily double nx\+::\+S\+E3\+Pose\+::get\+Yaw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the Yaw of the orientation. \begin{DoxyReturn}{Returns}
+The yaw. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/se3\+\_\+pose.\+h\end{DoxyCompactItemize}

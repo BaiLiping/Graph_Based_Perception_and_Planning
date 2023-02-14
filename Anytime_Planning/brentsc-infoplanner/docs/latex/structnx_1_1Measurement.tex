@@ -1,0 +1,57 @@
+\hypertarget{structnx_1_1Measurement}{}\section{nx\+:\+:Measurement Struct Reference}
+\label{structnx_1_1Measurement}\index{nx\+::\+Measurement@{nx\+::\+Measurement}}
+
+
+{\ttfamily \#include $<$sensor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structnx_1_1Measurement_abaa990110b3febfee67588a478b76463}{Measurement} (const Vector\+Xd \&z, const Vector\+Xd \&z\+\_\+with\+\_\+noise, int ID, int valid)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structnx_1_1Measurement_a6c3fd2bb2a0dd31f38b32dfb50fdadfe}\label{structnx_1_1Measurement_a6c3fd2bb2a0dd31f38b32dfb50fdadfe}} 
+Vector\+Xd {\bfseries z}
+\item 
+\mbox{\Hypertarget{structnx_1_1Measurement_a7af6783ecf425dbab85b01a888c8a44d}\label{structnx_1_1Measurement_a7af6783ecf425dbab85b01a888c8a44d}} 
+Vector\+Xd {\bfseries z\+\_\+with\+\_\+noise}
+\item 
+\mbox{\Hypertarget{structnx_1_1Measurement_a820725d94b788f3d37cc466944bb56cf}\label{structnx_1_1Measurement_a820725d94b788f3d37cc466944bb56cf}} 
+int {\bfseries ID}
+\item 
+\mbox{\Hypertarget{structnx_1_1Measurement_a3be8fbe12c51296f5368ddc7b095007a}\label{structnx_1_1Measurement_a3be8fbe12c51296f5368ddc7b095007a}} 
+int {\bfseries valid}
+\item 
+\mbox{\Hypertarget{structnx_1_1Measurement_af6f13cd66b167d8106134c37ac001e68}\label{structnx_1_1Measurement_af6f13cd66b167d8106134c37ac001e68}} 
+unsigned {\bfseries z\+\_\+dim}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{structnx_1_1Measurement}{Measurement} structure contains the measurement information of a target, as detected by a sensor. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structnx_1_1Measurement_abaa990110b3febfee67588a478b76463}\label{structnx_1_1Measurement_abaa990110b3febfee67588a478b76463}} 
+\index{nx\+::\+Measurement@{nx\+::\+Measurement}!Measurement@{Measurement}}
+\index{Measurement@{Measurement}!nx\+::\+Measurement@{nx\+::\+Measurement}}
+\subsubsection{\texorpdfstring{Measurement()}{Measurement()}}
+{\footnotesize\ttfamily nx\+::\+Measurement\+::\+Measurement (\begin{DoxyParamCaption}\item[{const Vector\+Xd \&}]{z,  }\item[{const Vector\+Xd \&}]{z\+\_\+with\+\_\+noise,  }\item[{int}]{ID,  }\item[{int}]{valid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructs a measurement. 
+\begin{DoxyParams}{Parameters}
+{\em z} & The measurement vector z. \\
+\hline
+{\em z\+\_\+with\+\_\+noise} & The measurement with Additive noise. \\
+\hline
+{\em ID} & The ID \\
+\hline
+{\em valid} & The validity of the measurement. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/igl/sensing/sensor.\+h\end{DoxyCompactItemize}

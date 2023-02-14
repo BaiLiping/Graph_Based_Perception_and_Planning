@@ -1,0 +1,14 @@
+# Target Model Configuration
+target_model: normal
+target_dim: 4 # Dimension per each target (i.e. 2 for 2D position tracking, 3 for 3D position tracking, 4 for 2D+velocity)
+env_da: [100] # List of IDs for the targets (Data association)
+y0: # Here initial positions are given. Velocities always begin at (0,0). The number of targets is the number of rows.
+- [5, 5]
+
+# System Parameters
+use_prior: 1 # Give robots a prior on the target state. If false, the robots will discover the targets dynamically.
+q: .01 # Diffusion / Noise parameter for motion model
+cov_pos: 2 # Prior covariance in each position dimension.
+
+velocity: 1 # Flag indicating velocity estimation.
+cov_vel: .1 # Prior covariance in each velocity dimension.

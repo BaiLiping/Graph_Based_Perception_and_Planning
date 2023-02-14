@@ -1,0 +1,3 @@
+# General Differential Drive Robot Configuration
+  mprimpath: data/mprim/mprim_SE2_RL.yaml
+  sensorConfig: data/config/sensors/rangeBearing.yaml
